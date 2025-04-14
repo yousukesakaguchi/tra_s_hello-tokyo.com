@@ -50,7 +50,7 @@
 		<div class="page_visual_content">
 			<div class="page_visual_title">
 				<p class="page_visual_title_en _poppins"><span class="first">R</span>ECRUIT</p>
-				<h1 class="page_visual_title_ja">パートタイム募集</h1>
+				<h1 class="page_visual_title_ja">アルバイト・副業</h1>
 				<p class="page_visual_title_sub">GOアプリ専用ドライバー<br>GO Crew</p>
 			</div>
 			<div class="page_visual_img w645">

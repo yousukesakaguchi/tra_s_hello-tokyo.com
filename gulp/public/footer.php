@@ -29,7 +29,7 @@
 							<a class="f_nav_item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>employee/"><span>正社員募集</span></a>
 						</li>
 						<li class="f_nav_item">
-							<a class="f_nav_item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>パートタイム募集</span></a>
+							<a class="f_nav_item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>アルバイト・副業</span></a>
 						</li>
 					</ul>
 					<ul class="f_nav_list">
@@ -49,12 +49,6 @@
 						</li>
 						<li class="f_nav_subitem">
 							<a class="f_nav_item_sublink" href="<?php echo esc_url( home_url( '/' ) ); ?>site_policy/"><span>サイトポリシー</span></a>
-						</li>
-						<li class="f_nav_subitem">
-							<a class="f_nav_item_sublink" href="https://www.nihon-kotsu-taxi.jp/reserve/fee/" target="_blank"><span>運賃料金</span></a>
-						</li>
-						<li class="f_nav_subitem">
-							<a class="f_nav_item_sublink" href="https://www.nihon-kotsu.co.jp/clause/" target="_blank"><span>運送約款</span></a>
 						</li>
 					</ul>
 				</div>

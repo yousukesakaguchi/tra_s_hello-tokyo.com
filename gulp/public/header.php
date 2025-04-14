@@ -73,7 +73,7 @@
 									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>employee/"><span>正社員募集</span></a>
 								</li>
 								<li class="global_nav_item">
-									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>パートタイム募集</span></a>
+									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>アルバイト・副業</span></a>
 								</li>
 								<li class="global_nav_item">
 									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>voice/"><span>ドライバーの声</span></a>
