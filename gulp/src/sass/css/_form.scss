@@ -1,0 +1,47 @@
+@use 'utility/media';
+/* Scss Document */
+
+/* フォームのスタイル解除
+------------------------------------------------------ */
+@mixin placeholderColor($color) {
+	&:placeholder-shown {
+		color: $color;
+		@include yugo;
+	}
+	&::-webkit-input-placeholder {
+		color: $color;
+		@include yugo;
+	}
+	&:-moz-placeholder {
+		color: $color;
+		opacity: 1;
+		@include yugo;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		opacity: 1;
+		@include yugo;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		display: flex;
+		align-items: center;
+		@include yugo;
+	}
+}
+
+input,
+button,
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: none;
+	border-radius: 0;
+	outline: none;
+	resize:none;
+	&:hover {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,155 @@
+$spCamp: 750;
+$pcCamp: 1520;
+
+@mixin tran($element, $duration, $delay) {
+  transition: #{$element} #{$duration}s cubic-bezier(0.15, 0.25, 0.85, 0.7) #{$delay}s;
+}
+
+@mixin liquidSize($selector, $pc, $sp) {
+  @if $sp == "auto" {
+    #{$selector}: auto;
+  } @else if($sp == "none") {
+
+  } @else {
+    @include max-screen($breakpoint-sm) {
+      #{$selector}: #{$sp}px;
+      #{$selector}: calc(#{$sp} / #{$spCamp} * 100vw);
+    }
+
+  }
+
+  @include min-screen($breakpoint-md) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else if($pc == "none") {
+
+    } @else {
+      #{$selector}: #{$pc}px;
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+    }
+  }
+
+  @include min-screen($breakpoint-xl) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else if($pc == "none") {
+
+    } @else {
+      #{$selector}: #{$pc}px;
+      //#{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+    }
+  }
+
+  /*
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else {
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+
+    }
+  }
+  */
+
+
+}
+
+@mixin liguidSizeImportant($selector, $pc, $sp) {
+  @if $sp == "auto" {
+    #{$selector}: auto !important;
+  } @else if($sp == "none") {
+
+  } @else {
+    @include max-screen($breakpoint-sm) {
+      #{$selector}: #{$sp}px !important;
+      #{$selector}: calc(#{$sp} / #{$spCamp} * 100vw) !important;
+    }
+
+  }
+
+  @include min-screen($breakpoint-md) {
+    @if $pc == "auto" {
+      #{$selector}: auto !important;
+    } @else if($pc == "none") {
+
+    } @else {
+      #{$selector}: #{$pc}px !important;
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw) !important;
+    }
+  }
+
+  @include min-screen($breakpoint-lg) {
+    @if $pc == "auto" {
+      #{$selector}: auto !important;
+    } @else if($pc == "none") {
+
+    } @else {
+      #{$selector}: #{$pc}px !important;
+      //#{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw) !important;
+    }
+  }
+
+  /*
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else {
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+
+    }
+  }
+  */
+
+
+}
+
+
+
+@mixin liquidSizeNoLimit($selector, $pc, $sp) {
+  @if $sp == "auto" {
+    #{$selector}: auto;
+  } @else if($sp == "none") {
+
+  } @else {
+    @include max-screen($breakpoint-sm) {
+      #{$selector}: #{$sp}px;
+      #{$selector}: calc(#{$sp} / #{$spCamp} * 100vw);
+    }
+
+  }
+
+  @include min-screen($breakpoint-md) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else if($pc == "none") {
+
+    } @else {
+      #{$selector}: #{$pc}px;
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+    }
+  }
+
+  @include min-screen($breakpoint-xl) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else if($pc == "none") {
+
+    } @else {
+      #{$selector}: #{$pc}px;
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+    }
+  }
+
+  /*
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    @if $pc == "auto" {
+      #{$selector}: auto;
+    } @else {
+      #{$selector}: calc(#{$pc} / #{$pcCamp} * 100vw);
+
+    }
+  }
+  */
+
+
+}

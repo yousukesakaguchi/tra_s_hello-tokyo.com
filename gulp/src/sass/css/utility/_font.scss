@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+//游ゴシック
+@mixin yugo {
+  font-family: "Yu Gothic", YuGothic, メイリオ, meiryo, "メイリオ", "meiryo",
+    "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", sans-serif;
+  font-weight: 500;
+}
+.yugo {
+  font-family: "Yu Gothic", YuGothic, メイリオ, meiryo, "メイリオ", "meiryo",
+    "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", sans-serif;
+  font-weight: 500;
+}
+
+@mixin noto {
+  font-family: "Noto Sans JP", sans-serif;
+}
+@mixin mont {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+/* ----------------------------------------------------------
+font-weight
+---------------------------------------------------------- */
+@mixin thin {
+  font-weight: 100;
+}
+@mixin extralight {
+  font-weight: 200;
+}
+@mixin ultralight {
+  font-weight: 200;
+}
+@mixin light {
+  font-weight: 300;
+}
+@mixin normal {
+  font-weight: 400;
+}
+@mixin medium {
+  font-weight: 500;
+}
+@mixin semibold {
+  font-weight: 600;
+}
+@mixin demibold {
+  font-weight: 600;
+}
+@mixin bold {
+  font-weight: 700;
+}
+@mixin extrabold {
+  font-weight: 800;
+}
+@mixin ultrabold {
+  font-weight: 800;
+}
+@mixin black {
+  font-weight: 900;
+}
+@mixin heavy {
+  font-weight: 900;
+}

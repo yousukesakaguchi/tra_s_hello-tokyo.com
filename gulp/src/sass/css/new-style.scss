@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* Scss Document */
+
+a,
+input,
+*::before,
+*::after {
+  backface-visibility: hidden; //Chromeでのホバー時のチラつきを防ぐ
+  -webkit-backface-visibility: hidden;
+}
+
+.img {
+  //IE10
+  @media all and (-ms-high-contrast: none) {
+    img {
+      min-width: auto !important;
+    }
+  }
+  //IE11
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop,
+    img {
+      min-width: auto !important;
+    }
+  }
+  //EDGE
+  _:-ms-lang(x),
+  _::-webkit-meter-bar,
+  img {
+    min-width: auto !important;
+  }
+}
+
+//インクルードファイル
+@import "utility/reset.scss"; //リセット
+@import "utility/media.scss"; //ブレイクポイント
+@import "utility/mixin.scss";
+@import "utility/colors.scss";
+@import "utility/font.scss";
+@import "utility/base.scss"; //基本設定
+@import "utility/text.scss";
+
+@import "module.scss"; //パーツ
+
+@import "form.scss";
+@import "state.scss"; //状態変化
+@import "animate.scss";
+@import "_article.scss";
+
+@import "layout.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
+
+
+@import "pages/_home.scss";
+@import "pages/_contact.scss";
+@import "pages/_privacypolicy.scss";
+

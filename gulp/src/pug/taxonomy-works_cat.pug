@@ -1,0 +1,118 @@
+include inc/_config.pug
+|<?php 
+|/**
+|* @package WordPress 
+|* Template Name: 制作実績 一覧
+|*/
+|get_header()
+|?> 
+
+
+
+div(id="home" data-barba="container" data-barba-namespace="works")
+
+
+  #home-content(data-scroll-section="true")
+
+    //-
+    //- 制作実績
+    //-
+    - var name = 'works'
+    section.l-section(id=name)
+      .l-container(class="home-" + name + "__container")
+        .m-head-1
+          h2.m-head-1__txt
+            span.ja 制作実績
+            span.en WORKS
+
+
+
+        #search
+          .search-tab__content
+            .search-tab__content-item.is-active(data-tab="works")
+              .search-tab__head
+                span.ja カテゴリー
+                span.en CATEGORY
+              .search-tab__cat
+                :php
+                  if( !is_tax() ):
+                a.search-tab__cat-item.is-active すべてのカテゴリー
+                :php
+                  else:
+                a.search-tab__cat-item(href="<?php echo esc_url( home_url() ); ?>/works/#search") すべてのカテゴリー
+                :php
+                  endif;
+                //- タクソノミー works_cat
+                :php
+                  $taxonomy = 'works_cat';
+                  $terms = get_terms($taxonomy);
+                  foreach ( $terms as $term ) :
+                    $term_name = $term->name;
+                    $term_slug = $term->slug;
+                    $term_link = get_term_link($term_slug,$taxonomy);
+                    /* 現在のページがタームページの場合はis-activeを付与 */
+                    if(is_tax($taxonomy,$term_slug)):
+                a.search-tab__cat-item.is-active(href="<?php echo $term_link; ?>") <?php echo $term_name; ?>
+                :php
+                  else:
+                a.search-tab__cat-item(href="<?php echo $term_link; ?>#search") <?php echo $term_name; ?>
+                :php
+                  endif;
+                :php
+                  endforeach;
+
+
+
+      ul#works-list.m-works-list-1
+        :php
+
+
+          while (have_posts() ) :
+            the_post();
+            $post = get_post();
+            $post_id = $post->ID;
+            $url = get_permalink($post_id);
+            $client = SCF::get( 'client', $post_id );
+            $work = SCF::get( 'work', $post_id );
+            $taxonomy = 'works_cat';
+            $terms = get_the_terms($post_id,$taxonomy);
+            $eycatch = get_the_post_thumbnail_url($post_id);
+
+        li.works-list__item.m-works-list-1__item
+          a.works-list__link.m-works-list-1__link(href="<?php echo $url; ?>")
+            h3.content
+                .content-inner
+                  span.work
+                    |<?php echo $work; ?>
+                  span.client
+                    |<?php echo $client; ?>
+            .cat
+              :php
+                //$termsの中身があるかどうかをチェック
+                if( $terms ):
+                  foreach( $terms as $term ):
+                    echo '<span class="cat-item">#'.$term->name.'</span>';
+                  endforeach;
+
+              :php
+                endif;
+          .works-list__img.m-works-list-1__img
+            img(src="<?php echo $eycatch; ?>" alt="<?php the_title(); ?>")
+        :php
+          endwhile;
+
+
+
+      #pageNavi
+        :php
+          if(function_exists('wp_pagenavi')):
+            wp_pagenavi();
+          endif;
+
+
+
+|<?php get_footer(); ?>
+
+
+
+

@@ -1,0 +1,137 @@
+include inc/_config.pug
+|<?php 
+|/**
+|* @package WordPress 
+|* Template Name: 制作実績 詳細
+|*/
+|get_header()
+|?> 
+
+
+
+:php
+  /* この記事の投稿タイプ */
+  $post_type = get_post_type();
+  $post_typeName = get_post_type_object($post_type)->name;
+  //$post_typeNameを大文字に変換
+  $post_typeName = strtoupper($post_typeName);
+  /* この記事のタクソノミー */
+  $taxonomy;
+  if($post_type == 'works'):
+    $taxonomy = 'works_cat';
+  elseif($post_type == 'topics'):
+    $taxonomy = 'topics_cat';
+  endif;
+  /* この記事のタクソノミーのターム */
+  $terms = get_the_terms($post->ID,$taxonomy);
+
+  /* アイキャッチ画像 */
+  $thumbnail_id = get_post_thumbnail_id();
+  $thumbnail = wp_get_attachment_image_src( $thumbnail_id , 'full' );
+
+div(id="page-single" data-barba="container" data-barba-namespace="works")
+
+
+  #article-wrapper
+    .l-container
+      section.article-card(class="<?php echo $post_type; ?>")
+        :php
+          if(have_posts()):
+
+        .meta
+
+          span.type
+            |<?php echo $post_typeName; ?>
+
+          h1.title
+            |<?php the_title(); ?>
+
+          :php
+            if($post_type == 'topics'):
+          span.date
+            |<?php the_time('Y/m/d'); ?>
+          :php
+            endif;
+
+          :php
+            if($terms):
+          ul.tag
+            :php
+              foreach($terms as $term):
+                $termName = $term->name;
+            li.tag-item
+              |<?php echo '#'.$termName; ?>
+
+            :php
+              endforeach;
+              endif;
+
+
+        :php
+          if( $thumbnail_id ):
+        .thumb
+          img(src="<?php echo $thumbnail[0]; ?>" alt="<?php the_title(); ?>")
+        :php
+          endif;
+
+
+
+        :php
+          if($post_type == 'works'):
+        dl.project
+          dt CLIENT
+          dd
+            |<?php echo SCF::get('client'); ?>
+          dt WORK
+          dd
+            |<?php echo SCF::get('work'); ?>
+        :php
+          endif;
+
+        article#article
+
+          :php
+            the_content();
+
+
+
+        :php
+          endif;
+
+
+
+
+      section#article-nav
+        :php
+          if($post_type == 'works'):
+            $label = '実績';
+          elseif($post_type == 'topics'):
+            $label = '記事';
+          endif;
+
+        .nav-item
+          //-前の記事
+          :php
+            $prev_post = get_previous_post();
+            if($prev_post):
+          a.nav-btn.prev(href="<?php echo get_permalink($prev_post->ID); ?>") ひとつ「前」の
+            |<?php echo $label; ?>
+          :php
+            endif;
+
+        .nav-item
+          //-次の記事
+          :php
+            $next_post = get_next_post();
+            if($next_post):
+          a.nav-btn.next(href="<?php echo get_permalink($next_post->ID); ?>") ひとつ「次」の
+            |<?php echo $label; ?>
+          :php
+            endif;
+
+
+|<?php get_footer(); ?>
+
+
+
+

@@ -1,0 +1,111 @@
+.anim {
+  opacity: 0;
+}
+.anim.is-inview {
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.65,0.05,0.36,1) 0.1s;
+}
+
+.anim-curtain {
+  max-width: 0;
+  overflow: hidden;
+  transition: max-width 1s cubic-bezier(0.65,0.05,0.36,1) 0s;
+
+  img {
+    max-width: none;
+  }
+  &.is-inview {
+    max-width: 100%;
+  }
+}
+
+.anim-fadeUp {
+  transform: translateY(30px);
+  
+  &.is-inview {
+    transform: translateY(0);
+    transition: all 1s cubic-bezier(0.65,0.05,0.36,1) 0.3s;
+  }
+}
+
+.anim-zoomOutImg {
+  overflow: hidden;
+  img {
+    transform: scale(1.2);
+    transition: opacity 1s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+  }
+  &.is-inview {
+    img {
+      transform: scale(1);
+      transition: opacity 0.3s ease-in-out 0s, transform 0.6s ease-in-out 0s;
+    }
+  }
+}
+
+.anim-zoomOut {
+  transform-origin: center center;
+  transform: scale(2);
+  transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+  &.is-inview {
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+  }
+}
+
+.anim-zoomOutParent {
+  .anim-zoomOutChild {
+    transform-origin: center center;
+    transform: scale(2);
+    transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+    opacity: 0;
+  }
+  &.is-inview {
+    .anim-zoomOutChild {
+      transform: scale(1);
+      transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+      opacity: 1;
+      $i: 1;
+      @for $i from 1 through 30 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.1s * $i;
+        }
+      }
+    }
+  }
+}
+
+.js-word-divider {
+  span {
+    opacity: 0;
+    //transform: translate3d(0, 50%, 0);
+    display: inline-block;
+    //rotate: -90deg;
+    transform-origin: center center;
+    scale: 1.2;
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i}) {
+        /*ランダム*/
+        rotate: random(360) + deg;
+        transform: translate3d(random(300) - 0%, random(300) - 0%, 0);
+      }
+    }
+  }
+  &.is-inview {
+    span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      rotate: 0deg;
+      scale: 1;
+      transition:
+        opacity 0.6s cubic-bezier(0.65,0.05,0.36,1),
+        transform 1.6s cubic-bezier(0.65,0.05,0.36,1),
+        rotate 1s cubic-bezier(0.65,0.05,0.36,1),
+        scale 0.6s cubic-bezier(0.65,0.05,0.36,1);
+      @for $i from 1 through 30 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.03s * $i;
+        }
+      }
+    }
+  }
+}

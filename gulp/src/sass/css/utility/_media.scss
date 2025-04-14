@@ -1,0 +1,42 @@
+@charset "utf-8";
+//ブレイクポイントの設定
+// sm - 560 スマホ
+// md 561 - 959 タブレット　リキッド
+// lg 960 - リキッド
+// xl 1280 - 固定
+$breakpoint-xl: 1520px;
+$breakpoint-lg: 961px;
+$breakpoint-md: 769px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 350px;
+
+@mixin max-screen($break-point) {
+	@media screen and (max-width: $break-point) {
+		@content;
+	}
+}
+
+@mixin min-screen($break-point) {
+	@media screen and (min-width: $break-point) {
+		@content;
+	}
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+	@media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+		@content;
+	}
+}
+
+//mqpackerにメディアクエリーの順番をセットする
+@include min-screen($breakpoint-md) {
+	.setOrder {color:#000;}
+}
+@include min-screen($breakpoint-lg) {
+	.setOrder {color:#000;}
+}
+@include max-screen($breakpoint-sm) {
+	.setOrder {color:#000;}
+}
+
+

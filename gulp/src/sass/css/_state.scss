@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+#loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  max-height: 100svh;
+  transition: all 0.6s ease-in-out;
+  &.is-open {
+    //バーガーメニュー開いた時
+    opacity: 0;
+    pointer-events: none;
+  }
+  #symbol {
+    max-width: 0;
+    transition: 0.8s cubic-bezier(0.6, 0.04, 0.98, 1);
+    opacity: 0;
+    overflow: hidden;
+
+    @include liquidSize(width, 1142, 682);
+    @include liquidSize(height, 344, 259);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    //translate: -50% -50%;
+    @include liquidSize(top, 150, 171);
+    translate: -50% 0;
+  }
+  #symbol-wrapper {
+    @include liquidSize(min-width, 1142, 682);
+    @include liquidSize(min-height, 344, 259);
+    //translate: 50% -50%;
+    transition: 0.8s cubic-bezier(0.6, 0.04, 0.98, 1);
+  }
+  .symbol {
+    @include liquidSize(min-width, 1142, 682);
+    @include liquidSize(min-height, 344, 259);
+    @include liquidSize(width, 1142, 682);
+    @include liquidSize(height, 344, 259);
+    @include liquidSize(margin-left, 8, 8);
+    transition: 0.8s cubic-bezier(0.6, 0.04, 0.98, 1);
+  }
+  path, rect {
+    fill: #fff;
+  }
+  #loading-logo {
+    @include liquidSize(width, 200, 300);
+    @include liquidSize(height, 116, 174);
+  }
+  #loading-logo img {
+    @include liquidSize(min-width, 200, 300);
+    @include liquidSize(min-height, 116, 174);
+  }
+  #loading-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 10002;
+    transition: 2s cubic-bezier(0.6, 0.04, 0.98, 1);
+    max-width: 0;
+    overflow: hidden;
+  }
+}
+
+
+
+#transition {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+body {
+  background: #EFEFEF;
+  &.is-transit {
+    #transition {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #loading {
+      background: none;
+      pointer-events: none;
+      z-index: 10;
+      path, rect {
+        fill: #0F0F0F;
+      }
+    }
+    #content {
+      opacity: 1;
+      translate: 0 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &.is-transitioning {
+    #transition {
+      opacity: 1;
+      pointer-events: all;
+    }
+    #loading {
+      opacity: 0;
+      transition: all 0s;
+      #symbol {
+        opacity: 0;
+        pointer-events: none;
+        transition: 0s;
+      }
+    }
+    #content {
+      opacity: 0;
+      translate: 0 100px;
+      transition: translate 0.3s ease-in-out;
+    }
+  }
+}
+
+#pagetop {
+  .js-loading__content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2.5s ease-in-out 0.5s;
+  }
+  &.phase-0 {
+    #header {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #loading {
+      background: #000;
+    }
+  }
+  &.phase-1 {
+    #loading {
+      background: #000;
+    }
+    #loading-logo {
+      max-width: 100%;
+    }
+  }
+  &.phase-2 {
+
+    #loading-logo {
+      opacity: 0;
+    }
+  }
+  &.phase-3 {
+    #header {
+      opacity: 1;
+      pointer-events: all;
+    }
+    #symbol {
+      @include liquidSize(max-width, 1142, 682);
+      opacity: 1;
+      pointer-events: all;
+    }
+    #symbol-wrapper {
+      //translate: 0 0;
+    }
+    #loading {
+      background: none;
+      #symbol {
+        //@include liquidSize(top, 150, 171);
+        //translate: -50% 0;
+      }
+    }
+  }
+}
+
+
+
+.page-subpage {
+  //打ち消し
+  &.phase-3 {
+    #symbol {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+}
+
+.js-accordion-target {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease 0.1s;
+  &.is-open {
+  }
+}
+
+.js-slider {
+  overflow: hidden;
+  position: relative;
+  .js-slider-item {
+    display: flex;
+    transition: all 0.4s ease 0.1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    &.is-active {
+      transform: translateX(0%);
+    }
+  }
+}
+
+
+
+
+#bg {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  #canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    will-change: filter;
+  }
+}

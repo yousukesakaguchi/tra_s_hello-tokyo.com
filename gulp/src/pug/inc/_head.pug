@@ -1,0 +1,162 @@
+include _config.pug
+
+head(prefix="og: http://ogp.me/ns#")
+
+	//-/wp/wp-content/themes/sdc/images/home/kv-bg__md.jpgと/wp/wp-content/themes/sdc/images/home/kv-bg__sm.jpgをプリロード
+	link(rel="preload", as="image", href!="<?php echo get_template_directory_uri(); ?>/images/home/kv-bg__md.jpg")
+	link(rel="preload", as="image", href!="<?php echo get_template_directory_uri(); ?>/images/home/kv-bg__sm.jpg")
+
+	meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+	meta(http-equiv="Content-Script-Type" content="text/javascript")
+	meta(http-equiv="Content-Style-Type" content="text/css")
+	//-|<script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+	//-|<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" />
+
+	script(src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.4/dist/viewport-extra.min.js")
+	script.
+		(function(){
+		var ua = navigator.userAgent
+		var sp = ua.indexOf('iPhone') > -1 ||
+		(ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)
+		var tab = !sp && (
+		ua.indexOf('iPad') > -1 ||
+		(ua.indexOf('Macintosh') > -1 && 'ontouchend' in document) ||
+		ua.indexOf('Android') > -1
+		)
+		if (tab) new ViewportExtra(1480)
+		})()
+	script.
+		window.Promise || document.write('<script src="//www.promisejs.org/polyfills/promise-7.0.4.min.js"><\/script>');
+
+		window.addEventListener(
+			"DOMContentLoaded",
+			function () {
+				function timer(val, time) {
+					return function (result) {
+						return new Promise(function (resolve, reject) {
+							document.getElementsByTagName("body")[0].classList.add(val);
+							setTimeout(function () {
+								resolve("promise done");
+							}, time);
+						});
+					};
+				}
+				toppage = document.getElementById("pagetop");
+
+				if (toppage) {
+					Promise.resolve("first")
+						.then(timer("phase-0", 50))
+						.then(timer("phase-1", 500))
+						.then(timer("phase-2", 500))
+						.then(timer("phase-3", 500))
+						.then(timer("phase-4", 2000))
+				}
+			},
+			false
+		);
+
+
+	:php
+		if( is_home() || is_front_page() ):
+			echo "<!-- is_home() || is_front_page() -->";
+			$title = get_bloginfo('name');
+		else:
+			$title = get_the_title().'【大阪の広告デザイン会社・寺社仏閣クリエイティブ：匙デザインカンパニー】';
+		endif;
+
+
+		$topId = '41';
+		if( SCF::get( 'キーワード' ) == '' ):
+			$keyword = '';
+		else:
+			$keyword = SCF::get( 'キーワード' );
+		endif;
+
+		if( SCF::get( 'ディスクリプション' ) == '' ):
+			$description = SCF::get( 'ディスクリプション', $topId );
+		else:
+			$description = SCF::get( 'ディスクリプション' );
+		endif;
+
+
+		$key = 'topics';
+		if( strpos($_SERVER['REQUEST_URI'], $key) !== false || strpos($_SERVER['REQUEST_URI'], 'date') !== false || is_tag() ):
+		$title = 'お知らせ一覧'.'【大阪の広告デザイン会社・寺社仏閣クリエイティブ：匙デザインカンパニー】';
+		$description = '大阪の広告デザイン制作会社・㈱匙デザインカンパニーから発信する「お知らせ」の一覧ページです。最新情報をはじめ、普段の仕事を通しての気づきや話題を思うがままに、どこぞの誰かへのトピックスとして綴っています。';
+
+			if(is_tax()):
+			$term = get_queried_object();
+			$title = $term->name.'のトピックス一覧【大阪の広告デザイン会社・寺社仏閣クリエイティブ：匙デザインカンパニー】';
+			endif;
+
+		endif;
+
+
+		$key = 'works';
+		if( strpos($_SERVER['REQUEST_URI'], $key) !== false ):
+		$title = '制作実績一覧'.'【大阪の広告デザイン会社・寺社仏閣クリエイティブ：匙デザインカンパニー】';
+		$description = '大阪の広告デザイン制作会社・㈱匙デザインカンパニーが、対話と試行錯誤の末に解き放った、一般企業ならびに寺社仏閣に関する代表作を掲載しています。“餅は餅屋”の掛け算で創り上げた作品集をご覧ください。';
+
+			if(is_tax()):
+			$term = get_queried_object();
+			$title = $term->name.'の制作実績一覧【大阪の広告デザイン会社・寺社仏閣クリエイティブ：匙デザインカンパニー】';
+			endif;
+
+		endif;
+
+
+		if( is_singular() && !is_front_page() && !is_home() && !is_page() ):
+			echo "<!-- is_singular() && !is_front_page() && !is_home() -->";
+			$title = get_the_title().'【大阪の広告デザイン会社・寺社仏閣クリエイティブ：匙デザインカンパニー】';
+			$content = get_the_content();
+			if( $content == ''):
+				$content = $description;
+			else:
+				$content = mb_substr(strip_tags( str_replace(array("\r\n", "\r", "\n"), "", $content) ),0,100);
+			endif;
+			$description = $content;
+		endif;
+
+
+	title
+		|<?php echo $title; ?>
+	:php
+		if( $keyword !== ''):
+	meta(name="keywords" content!="<?php echo $keyword; ?>")
+	:php
+		endif;
+	meta(name="description" content!="<?php echo $description; ?>")
+	meta(property="og:type" content="website")
+	meta(property="og:title" content!="<?php echo $title; ?>")
+	meta(property="og:description" content!="<?php echo $description; ?>")
+	meta(property="og:url" content!="<?php echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>")
+
+	meta(property="og:image" content!='<?php echo get_template_directory_uri(); ?>/' + "images/ogp.jpg")
+
+	meta(property="og:site_name" content=site_name)
+	meta(property="og:locale" content="ja_JP")
+	meta(name="twitter:title" content!="<?php echo $title; ?>")
+	meta(name="twitter:description" content!="<?php echo $description; ?>")
+	meta(name="twitter:card" content="summary")
+
+	|<link rel="preconnect" href="https://fonts.googleapis.com">
+	|<link rel="preconnect" href="https://fonts.gstatic.com">
+	|<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+	link(rel='stylesheet', href!='<?php echo get_template_directory_uri(); ?>/css/style.css?v=<?php echo filemtime(get_template_directory() . "/css/style.css"); ?>' type='text/css' media='all')
+
+	|<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+	|<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+	|<?php wp_head(); ?>
+	link(rel="apple-touch-icon" sizes="180x180" href!="<?php echo get_template_directory_uri(); ?>/favicons/apple-touch-icon.png")
+	link(rel="icon" type="image/png" sizes="32x32" href!="<?php echo get_template_directory_uri(); ?>/favicons/favicon-32x32.png")
+	link(rel="icon" type="image/png" sizes="16x16" href!="<?php echo get_template_directory_uri(); ?>/favicons/favicon-16x16.png")
+	|<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/favicons/site.webmanifest">
+	|<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/favicons/safari-pinned-tab.svg" color="#000000">
+	|<meta name="msapplication-TileColor" content="#ffffff">
+	|<meta name="theme-color" content="#ffffff">
+	|<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon.ico">
+
+
+
