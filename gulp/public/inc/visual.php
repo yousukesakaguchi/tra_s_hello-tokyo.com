@@ -199,5 +199,49 @@
 </div>
 
 
+<?php elseif( is_page('voice04')) : ?>
+<div class="_high" id="page_visual">
+	<div class="contents_inner">
+		<div class="page_visual_content">
+			<div class="page_visual_title">
+				<p class="page_visual_title_en _poppins"><span class="first">V</span>OICE<span class="num">04</span></p>
+				<p class="page_visual_title_year _border">2023年入社</p>
+				<p class="page_visual_title_name _border">O・M<span>さん</span></p>
+				<!-- <p class="page_visual_title_ruby _border">YOKOGAWA TAKUMI</p> -->
+				<p class="page_visual_title_sub _border">気軽に始めて見つけた、<br>
+					ぴったりの仕事<br>
+					GO Crew から<br>
+					正社員にステップアップ</p>
+			</div>
+			<div class="page_visual_img w645">
+				<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice04/visual.webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice04/visual.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/img/voice/voice04/visual@2x.webp 2x" width="645" height="816" alt=""></div>
+			</div>
+		</div>
+		<div class="page_visual_line"></div>
+	</div>
+</div>
+
+
+<?php elseif( is_page('voice05')) : ?>
+<div class="_high" id="page_visual">
+	<div class="contents_inner">
+		<div class="page_visual_content">
+			<div class="page_visual_title">
+				<p class="page_visual_title_en _poppins"><span class="first">V</span>OICE<span class="num">05</span></p>
+				<p class="page_visual_title_year _border">2023年入社</p>
+				<p class="page_visual_title_name _border">K・N<span>さん</span></p>
+				<!-- <p class="page_visual_title_ruby _border">YOKOGAWA TAKUMI</p> -->
+				<p class="page_visual_title_sub _border">オリンピック競技引退後<br>
+					模索したセカンドキャリア</p>
+			</div>
+			<div class="page_visual_img w645">
+				<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice05/visual.webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice05/visual.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/img/voice/voice05/visual@2x.webp 2x" width="645" height="816" alt=""></div>
+			</div>
+		</div>
+		<div class="page_visual_line"></div>
+	</div>
+</div>
+
+
 
 <?php endif; ?>

@@ -46,6 +46,36 @@
 					</div>
 				</a>
 			</div>
+			<?php if(is_page('voice04')): ?>
+			<div class="voice_link_list_item _cover">
+			<?php else: ?>
+			<div class="voice_link_list_item">
+			<?php endif; ?>
+				<a class="item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>voice/voice04/">
+					<div class="item_img">
+						<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice_link_04.webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice_link_04.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/img/voice/voice_link_04@2x.webp 2x" alt=""></div>
+					</div>
+					<div class="item_text">
+						<p class="item_text_en _poppins">VOICE<span>04</span></p>
+						<p class="item_text_name">O・M<span>さん</span></p>
+					</div>
+				</a>
+			</div>
+			<?php if(is_page('voice05')): ?>
+			<div class="voice_link_list_item _cover">
+			<?php else: ?>
+			<div class="voice_link_list_item">
+			<?php endif; ?>
+				<a class="item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>voice/voice05/">
+					<div class="item_img">
+						<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice_link_05.webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/voice/voice_link_05.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/img/voice/voice_link_05@2x.webp 2x" alt=""></div>
+					</div>
+					<div class="item_text">
+						<p class="item_text_en _poppins">VOICE<span>05</span></p>
+						<p class="item_text_name">K・N<span>さん</span></p>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </section>

@@ -16,6 +16,7 @@ const progeny = require("gulp-progeny");
 const replace = require("gulp-replace");
 const sassGlob = require("gulp-sass-glob");
 const beautify = require("gulp-html-beautify");
+const sourcemaps = require("gulp-sourcemaps");
 
 const paths = {
   styles: {
@@ -34,6 +35,11 @@ const paths = {
     src: ["src/assets/**", "!src/assets/js/**"],
     dest: "public/",
   },
+  newScss: {
+    src: "./src/scss/**/*.scss",
+    dest: "./public/assets/css/",
+    watch: "./src/scss/**/*.scss"
+  }
 };
 
 function css() {
@@ -45,6 +51,18 @@ function css() {
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest(paths.styles.dest))
+    .pipe(browsersync.stream());
+}
+
+function newScss() {
+  return src(paths.newScss.src)
+    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(sourcemaps.init())
+    .pipe(sassGlob())
+    .pipe(sass({ outputStyle: "expanded" }).on('error', sass.logError))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(paths.newScss.dest))
     .pipe(browsersync.stream());
 }
 
@@ -100,11 +118,12 @@ function assetsCopy() {
 
 function browserSync(done) {
   browsersync.init({
-    proxy: "saji.local", // あなたのローカル開発環境の設定に合わせてください。
+    proxy: "hello-tokyocom.local", // あなたのローカル開発環境の設定に合わせてください。
     files: [
       paths.styles.dest + "/**",
       paths.scripts.dest + "/**",
       paths.pug.dest + "/**",
+      paths.newScss.dest + "/**",
     ],
     port: 5014,
   });
@@ -121,9 +140,11 @@ function watchFiles() {
   watch(paths.scripts.src, series(scripts, reload));
   watch(paths.pug.src, series(pugTask, reload));
   watch(paths.assets.src, series(assetsCopy, reload));
+  watch(paths.newScss.watch, series(newScss, reload));
 }
 
-const build = parallel(css, scripts, pugTask, assetsCopy);
+const build = parallel(css, newScss, scripts, pugTask, assetsCopy);
 const watcher = parallel(watchFiles, browserSync);
 
 exports.default = series(build, watcher);
+exports.scss = newScss;
