@@ -6,7 +6,7 @@
 get_header()
 ?>
 <main id="main">
-  <section id="fv">
+  <section class="js-header-white" id="fv">
     <div class="contents_inner">
       <p class="fv_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/fv_text.svg" alt="アルファード 保有数 日本交通グループ内 No.1" /></p>
       <div class="fv_player">

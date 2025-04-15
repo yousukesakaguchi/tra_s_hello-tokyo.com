@@ -172,7 +172,54 @@ function accordion(parents, button, target, time) {
 
 
 
+//ヘッダーの白黒切り替え
+//スクロール位置によるヘッダーの白黒切り替え
+//.js-header-whiteの上辺がビューポートの上辺に達したら白になり、
+//.js-header-whiteの下辺がビューポートの下辺に達したら黒になる
+//jQueryは使わない
 
+
+// スクロール位置によるヘッダーの白黒切り替え関数
+const toggleHeaderColor = () => {
+  // 複数の.js-header-white要素に対応するためにquerySelectorAllを使用
+  const headerWhiteElements = document.querySelectorAll('.js-header-white');
+  const scrollPosition = window.scrollY;
+  const header = document.querySelector('#header');
+  
+  // 要素が存在しない場合は処理を終了
+  if (!headerWhiteElements.length || !header) return;
+  
+  // 各要素に対して処理を実行
+  let shouldBeWhite = false;
+  
+  headerWhiteElements.forEach(headerWhite => {
+    if (scrollPosition >= headerWhite.offsetTop && scrollPosition < headerWhite.offsetTop + headerWhite.offsetHeight) {
+      shouldBeWhite = true;
+    }
+  });
+  
+  // 最終的な判定結果に基づいてクラスを追加/削除
+  if (shouldBeWhite) {
+    header.classList.add('is-white');
+  } else {
+    header.classList.remove('is-white');
+  }
+};
+
+// 初期状態を設定する関数
+const initHeaderColor = () => {
+  // 少し遅延させて実行（DOMが完全に読み込まれたことを確認）
+  setTimeout(toggleHeaderColor, 100);
+};
+
+// DOMContentLoadedイベントで初期実行（DOMが読み込まれた時点で実行）
+document.addEventListener('DOMContentLoaded', initHeaderColor);
+
+// ページロード完了時にも実行（画像なども含めて完全に読み込まれた時点）
+window.addEventListener('load', initHeaderColor);
+
+// スクロール時に実行
+window.addEventListener('scroll', toggleHeaderColor);
 
 
 

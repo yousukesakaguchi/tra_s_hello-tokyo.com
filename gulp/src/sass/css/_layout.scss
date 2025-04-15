@@ -55,5 +55,20 @@
 }
 
 
+#header {
+  &.is-white {
+    background: transparent;
 
+    @include min-screen($breakpoint-md) {
+      .logo {
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+      .global_nav_link {
+        color: #fff;
+      }
+    }
+  }
+}
 
