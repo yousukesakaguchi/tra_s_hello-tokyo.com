@@ -15,10 +15,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@400;700&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@400;700&amp;family=Barlow+Condensed:wght@700&amp;display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/base.css">
 	<?php get_template_part('inc/css'); ?>
+
+	<?php if( is_home() || is_front_page() || is_page(array('employee','parttime','walfare')) ): ?>
+		<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/new-style.css">
+	<?php endif; ?>
 
 	<!-- Google Tag Manager-->
     <script>

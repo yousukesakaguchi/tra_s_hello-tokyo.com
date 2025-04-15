@@ -32,25 +32,30 @@ input,
   }
 }
 
+
+section {
+  padding: 0;
+}
 //インクルードファイル
-@import "utility/reset.scss"; //リセット
+//@import "utility/reset.scss"; //リセット
 @import "utility/media.scss"; //ブレイクポイント
 @import "utility/mixin.scss";
 @import "utility/colors.scss";
 @import "utility/font.scss";
-@import "utility/base.scss"; //基本設定
+//@import "utility/base.scss"; //基本設定
 @import "utility/text.scss";
 
 @import "module.scss"; //パーツ
 
-@import "form.scss";
+//@import "form.scss";
 @import "state.scss"; //状態変化
 @import "animate.scss";
 @import "_article.scss";
 
 @import "layout.scss";
-@import "layout/header.scss";
-@import "layout/footer.scss";
+//@import "layout/header.scss";
+//@import "layout/footer.scss";
+@import "layout/cta.scss";
 
 
 

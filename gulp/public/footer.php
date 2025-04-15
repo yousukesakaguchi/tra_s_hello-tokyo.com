@@ -1,10 +1,10 @@
 
 
-	<?php if( is_home() || is_front_page() || is_page(array('about','walfare','voice','voice01','voice02','voice03'))|| is_404()): ?>
+	<?php if( is_page(array('about','voice','voice01','voice02','voice03', 'voice04', 'voice05'))|| is_404()): ?>
 		<?php get_template_part('inc/cta/link_recruit'); ?>
 	<?php endif; ?>
 
-	<?php if( is_home() || is_front_page() || is_page(array('about'))|| is_404()): ?>
+	<?php if( is_page(array('about'))|| is_404()): ?>
 		<?php get_template_part('inc/cta/tel'); ?>
 	<?php endif; ?>
 
@@ -12,10 +12,13 @@
 		<?php get_template_part('inc/cta/company'); ?>
 	<?php endif; ?>
 
-	<?php if( is_home() || is_front_page() || is_page(array('employee','parttime','walfare'))|| is_404()): ?>
+	<?php if( is_404()): ?>
 		<?php get_template_part('inc/cta/contact'); ?>
 	<?php endif; ?>
 
+	<?php if( is_home() || is_front_page() || is_page(array('walfare','voice','voice01','voice02','voice03', 'voice04', 'voice05'))|| is_404()): ?>
+		<?php get_template_part('inc/cta'); ?>
+	<?php endif; ?>
 
 	<footer id="footer">
 		<div class="contents_inner">

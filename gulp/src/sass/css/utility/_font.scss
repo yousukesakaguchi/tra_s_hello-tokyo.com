@@ -18,7 +18,19 @@
 @mixin mont {
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
+@mixin barlow {
+  font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+}
 
+.barlow {
+  font-family: "Barlow Condensed", "Noto Sans JP", sans-serif;
+}
+
+.noto {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+  
 /* ----------------------------------------------------------
 font-weight
 ---------------------------------------------------------- */

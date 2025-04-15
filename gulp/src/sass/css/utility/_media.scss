@@ -6,8 +6,8 @@
 // xl 1280 - 固定
 $breakpoint-xl: 1520px;
 $breakpoint-lg: 961px;
-$breakpoint-md: 769px;
-$breakpoint-sm: 768px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 767px;
 $breakpoint-xs: 350px;
 
 @mixin max-screen($break-point) {
