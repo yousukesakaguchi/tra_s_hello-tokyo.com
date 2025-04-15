@@ -31,8 +31,8 @@
 ---------------------------------------------------------- */
 
 .m-btn-1 {
-  @include liquidSize(width, 322, 352);
-  @include liquidSize(height, 51, 66);
+  @include liquidSize(width, 322, 440);
+  @include liquidSize(height, 51, 80);
   @include liquidSize(border-radius, 33, 66);
   border: solid 1px #fff;
   display: flex;
@@ -66,7 +66,7 @@
   .m-btn-1__text {
     font-weight: 700;
     line-height: 1;
-    @include liquidSize(font-size, 15, 20);
+    @include liquidSize(font-size, 15, 24);
     color: #fff;
     font-weight:700; /* bold */
     letter-spacing: 0em;

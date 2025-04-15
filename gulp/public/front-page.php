@@ -43,6 +43,33 @@ get_header()
       <p class="benefit_lead">移動にほんの少しの<span class="gold">贅沢感</span>を</p>
       <p class="benefit_body">100%アプリ配車による上質な送迎サービスを提供。おもてなしとは何かを追求し続け「質で日本一」を目指します！</p><a class="m-btn-1 __black benefit_btn" href="<?php echo esc_url( home_url( "/" ) ); ?>about/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">ハロートーキョーについて</span></a>
     </div>
+  </section>
+  <section id="concept">
+    <div class="concept_inner">
+      <h3 class="concept_title"><span class="title-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-1.svg" alt="タクシー" /></span><span class="title-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-2.svg" alt="" /></span><span class="title-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-3.svg" alt="モビリティビジネス" /></span></h3>
+      <p class="concept_body">ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー</p>
+    </div>
+  </section>
+  <section id="recruit">
+    <div class="recruit_item employee">
+      <div class="recruit_item_inner"><span class="recruit_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/recruit-1-icon-1.png" /></span>
+        <h3 class="recruit_title">正社員募集</h3>
+        <p class="recruit_body">ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー</p><a class="m-btn-1 recruit_btn" href="<?php echo esc_url( home_url( "/" ) ); ?>employee/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">詳しく見る</span></a>
+      </div>
+    </div>
+    <div class="recruit_item parttime">
+      <div class="recruit_item_inner"><span class="recruit_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/recruit-2-icon-1.png" /></span>
+        <h3 class="recruit_title">アルバイト・副業</h3>
+        <p class="recruit_body">ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー</p><a class="m-btn-1 recruit_btn" href="<?php echo esc_url( home_url( "/" ) ); ?>parttime/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">詳しく見る</span></a>
+      </div>
+    </div>
+  </section>
+  <section id="voice">
+    <div class="voice_inner">
+      <h3 class="voice_title"><span class="ja">ドライバーの声</span><span class="en barlow">VOICE</span><span class="line"></span></h3>
+      <p class="voice_lead">ドライバーたちのリアルな日常</p>
+      <p class="voice_body">100%日々業務に取り組むドライバーたちに、仕事の面白みや、ハロートーキョーの魅力などを語ってもらいました！</p><a class="m-btn-1 voice_btn" href="<?php echo esc_url( home_url( "/" ) ); ?>voice/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">ドライバーの声一覧</span></a>
+    </div>
   </section><?php
   	$paged = (int) get_query_var('paged');
   	$args = array(
