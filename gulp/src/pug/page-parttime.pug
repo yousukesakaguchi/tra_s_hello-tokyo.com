@@ -1,0 +1,84 @@
+|<?php 
+|/**
+|* @package WordPress 
+|* Template Name: アルバイト・副業
+|*/
+|get_header()
+|?>
+main#main.parttime
+  section#kv.js-header-white
+    .employee-kv_inner
+      #employee-kv_title
+        h1
+          span.employee-kv_title-label 未経験者歓迎
+          p.employee-kv_title-text [ ノルマなし ]  &amp;  [ 流し営業なし ] のハイグレードドライバーへ
+        .kv-cross
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-cross-1.svg')
+
+      h2#employee-kv_title-1
+        picture
+          source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-1__sm.svg')
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-1__md.svg' alt='高級 アルファード保有台数No.1')
+      h2#employee-kv_title-2
+        picture
+          source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-2__sm.svg')
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-2__md.svg' alt='高給 独自の給与制度&還元率')
+
+    .employee-kv_bg
+
+
+
+  section#employee_advantages.js-header-white
+    .employee_advantages_inner
+      .employee_head.employee_advantages_head
+        h3.ja 働くメリット
+        span.en.barlow ADVANTAGES
+        span.line
+
+      .employee_advantages_blk
+        p.employee_advantages_lead 最高級の車で
+          br
+          |最上級の安定を
+        .employee_advantages_text
+          p.employee_advantages_body VIP送迎に強みを持つ事業者として独自路線の成長を遂げてきたハロートーキョーでは、
+            span.gold 従来のタクシー会社に対するイメージを一新。
+          p.employee_advantages_body 100％アプリ配車でハイグレードな送迎サービスを提供する会社ならではのメリットがいくつもあります。
+
+      ul.employee_advantages_list
+        li.employee_advantages_item._item-1
+          span.label.barlow
+            span.num 01
+            span.point POINT
+          .employee_advantages_item_content
+            span.title 100％アプリ配車だから
+            span.highlight 流し営業ゼロ
+
+        li.employee_advantages_item._item-2
+          span.label.barlow
+            span.num 02
+            span.point POINT
+          .employee_advantages_item_content
+            span.title 自分らしく働ける
+            span.highlight ノルマ／集客なし
+        li.employee_advantages_item._item-3
+          span.label.barlow
+            span.num 03
+            span.point POINT
+          .employee_advantages_item_content
+            span.title しっかり休める
+            span.highlight 年間休日209回以上
+
+        li.employee_advantages_item._item-4
+          span.label.barlow
+            span.num 04
+            span.point POINT
+          .employee_advantages_item_content
+            span.title 保証給
+            span.highlight 435万円／年
+            span.note ※1年目
+
+
+
+
+
+|<?php get_footer(); ?>

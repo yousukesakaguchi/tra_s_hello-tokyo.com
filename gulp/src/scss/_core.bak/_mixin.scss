@@ -1,0 +1,48 @@
+// ブレイクポイント
+$breakpoints: (
+  'sm': 480px,
+  'md': 768px,
+  'lg': 1080px,
+  'xl': 1280px,
+  'xxl': 1480px
+);
+
+// メディアクエリ
+@mixin mq($breakpoint: md, $rule: min, $value: width) {
+  @if $breakpoint == 'sm-max' {
+    @media screen and (max-width: (map-get($breakpoints, 'md') - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == 'md-max' {
+    @media screen and (max-width: (map-get($breakpoints, 'lg') - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg-max' {
+    @media screen and (max-width: (map-get($breakpoints, 'lg') - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == 'custom' {
+    @media screen and (min-width: $rule) {
+      @content;
+    }
+  } @else {
+    @media screen and (#{$rule}-#{$value}: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// Flexbox
+@mixin flexbox {
+  display: flex;
+}
+
+// Align Items
+@mixin align-items($value: center) {
+  align-items: $value;
+}
+
+// Justify Content
+@mixin justify-content($value: center) {
+  justify-content: $value;
+} 

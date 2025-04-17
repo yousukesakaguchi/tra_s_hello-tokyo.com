@@ -1,0 +1,105 @@
+body {
+  @include max-screen($breakpoint-sm) {
+    padding-top: 0;
+  }
+}
+
+#mainparttime {
+  background-color: #00C4FF;
+}
+
+
+
+
+.parttime_workstyle_item {
+  width: 100%;
+  @include liquidSize(height, 540, 360);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  @include liquidSize(padding-top, 62, 39);
+  @include liquidSize(padding-left, 60, 39);
+  &:not(:last-child) {
+    @include liquidSize(margin-bottom, 20, 30);
+  }
+  &._item-1 { background-image: url(../assets/img/parttime/workstyle-bg-1.jpg); }
+  &._item-2 { background-image: url(../assets/img/parttime/workstyle-bg-2.jpg); }
+  &._item-3 { background-image: url(../assets/img/parttime/workstyle-bg-3.jpg); }
+  &._item-4 { background-image: url(../assets/img/parttime/workstyle-bg-4.jpg); }
+
+  .label {
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    @include liquidSize(width, 150, 130);
+    @include liquidSize(height, 150, 100);
+    position: relative;
+    @include liquidSize(margin-bottom, 6, 16);
+    .num {
+      @include liquidSize(font-size, 76, 60);
+      font-weight:700; /* bold */
+      line-height: 1;
+      position: relative;
+      top: -0.2em;
+      letter-spacing: 0.059em;
+    }
+    .point {
+      @include liquidSize(font-size, 14, 20);
+      font-weight:700; /* bold */
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      @include liquidSize(right, 40, 10);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      @include liquidSize(left, 0, 0);
+      height: 1px;
+      background-color: #FFF;
+      transform-origin: left bottom;
+      @include max-screen($breakpoint-sm) {
+        width: 130%;
+        rotate: -30deg;
+      }
+      @include min-screen($breakpoint-md) {
+        //対角線の長さ
+        width: 141.3%;
+        rotate: -45deg;
+      }
+    }
+  }
+}
+
+.parttime_workstyle_item_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .title {
+    @include liquidSize(font-size, 30, 30);
+    font-weight:700; /* bold */
+    line-height: 1;
+    color: #fff;
+    @include liquidSize(margin-bottom, 18, 18);
+    display: block;
+  }
+  .highlight {
+    @include liquidSize(font-size, 50, 50);
+    color: #AD9647;
+    line-height: 1;
+    font-weight:700; /* bold */
+    box-sizing: border-box;
+    border: solid 3px #AD9647;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0.15em 0.25em 0.2em;
+  }
+  .note {
+    @include liquidSize(font-size, 30, 30);
+    font-weight:700; /* bold */
+    color: #fff;
+    display: block;
+    @include liquidSize(margin-top, 5, 6);
+  }   
+}

@@ -1,0 +1,379 @@
+|<?php 
+|/**
+|* @package WordPress 
+|* Template Name: 正社員募集
+|*/
+|get_header()
+|?>
+main#main.employee
+  section#kv.js-header-white
+    .employee-kv_inner
+      #employee-kv_title
+        h1
+          span.employee-kv_title-label 未経験者歓迎
+          p.employee-kv_title-text [ ノルマなし ]  &amp;  [ 流し営業なし ] のハイグレードドライバーへ
+        .kv-cross
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-cross-1.svg')
+
+      h2#employee-kv_title-1
+        picture
+          source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-1__sm.svg')
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-1__md.svg' alt='高級 アルファード保有台数No.1')
+      h2#employee-kv_title-2
+        picture
+          source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-2__sm.svg')
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-2__md.svg' alt='高給 独自の給与制度&還元率')
+
+    .employee-kv_bg
+
+
+
+  section#employee_intro.js-header-white
+    .employee_intro_inner
+      p.employee_intro_lead アルファードに乗る
+        br
+        |ハイグレードドライバー
+        br
+        |という仕事に
+      figure.employee_intro_img
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/intro-fig-1.png' alt='')
+      p.employee_intro_body アルファードによるハイグレードな送迎に特化したサービスを提供する、日本交通グループのハロートーキョーは、
+        span.gold 創業以来ずっとラグジュアリー路線
+        |を歩んできました。
+      p.employee_intro_body 100%アプリ配車だから
+        span.gold 流し営業はゼロ
+        |。働きやすさも稼ぎやすさも叶えられるハイグレードドライバーに挑戦しませんか？
+
+
+
+  section#employee_highclass.js-header-white
+    .employee_highclass_inner
+      h3.employee_highclass_title
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/highclass-title-1.svg' alt='高級のリアル')
+
+      .employee_highclass_blk
+        figure.employee_highclass_img
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/highclass-fig-1.jpg')
+        .employee_highclass_text
+          p.employee_highclass_lead 乗り心地抜群の
+            br
+            |「アルファード」に乗務
+          p.employee_highclass_body 高級ワンボックスカーの代名詞とも言える「アルファード」は、利用するお客様だけでなく、
+            span.gold ドライバー自身の快適な仕事環境
+            |にもつながっています。
+          p.employee_highclass_body シートと身体の一体感が心地よい疲れしらずの運転席で、勤務中の気分も高まります。
+        
+
+
+  section#employee_highsalary.js-header-white
+    .employee_highsalary_inner
+      h3.employee_highsalary_title
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/highsalary-title-1.svg' alt='高給のリアル')
+
+      .employee_highsalary_blk
+        figure.employee_highsalary_img
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/highsalary-fig-1.jpg' alt='')
+        .employee_highsalary_text
+          p.employee_highsalary_lead 業界TOPクラスの
+            br
+            |「平均年収550万円」
+          p.employee_highsalary_body 独自の給与制度と還元率により、東京都内の同業他社と比べて高い給与水準を実現。
+          p.employee_highsalary_body 平均的な売上をクリアすれば
+            span.gold 1乗務につき¥2,000の手当
+            |が支給される「歩合給制度」もあり、
+            span.gold 年収800万円を超える
+            |ことも珍しくありません。
+
+
+
+  section#employee_advantages.js-header-white
+    .employee_advantages_inner
+      .employee_head.employee_advantages_head
+        h3.ja 働くメリット
+        span.en.barlow ADVANTAGES
+        span.line
+
+      .employee_advantages_blk
+        p.employee_advantages_lead 最高級の車で
+          br
+          |最上級の安定を
+        .employee_advantages_text
+          p.employee_advantages_body VIP送迎に強みを持つ事業者として独自路線の成長を遂げてきたハロートーキョーでは、
+            span.gold 従来のタクシー会社に対するイメージを一新。
+          p.employee_advantages_body 100％アプリ配車でハイグレードな送迎サービスを提供する会社ならではのメリットがいくつもあります。
+
+      ul.employee_advantages_list
+        li.employee_advantages_item._item-1
+          span.label.barlow
+            span.num 01
+            span.point POINT
+          .employee_advantages_item_content
+            span.title 100％アプリ配車だから
+            span.highlight 流し営業ゼロ
+
+        li.employee_advantages_item._item-2
+          span.label.barlow
+            span.num 02
+            span.point POINT
+          .employee_advantages_item_content
+            span.title 自分らしく働ける
+            span.highlight ノルマ／集客なし
+        li.employee_advantages_item._item-3
+          span.label.barlow
+            span.num 03
+            span.point POINT
+          .employee_advantages_item_content
+            span.title しっかり休める
+            span.highlight 年間休日209回以上
+
+        li.employee_advantages_item._item-4
+          span.label.barlow
+            span.num 04
+            span.point POINT
+          .employee_advantages_item_content
+            span.title 保証給
+            span.highlight 435万円／年
+            span.note ※1年目
+
+
+
+  section#employee_premium.js-header-white
+    .employee_premium_inner
+      h3.employee_premium_title
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/premium-title-1.png' alt='GO PREMIUM')
+      figure.employee_premium_fig
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/premium-fig-1.png')
+
+      .employee_premium_content
+        span.balloon さらにワンランク上へ
+        p.employee_premium_lead VIP層の移動を担当する
+          br
+          |「GO PREMIUMドライバー」に
+        p.employee_premium_body 『GO』アプリユーザーであるお客様からの配車依頼に対して、高級ワンボックス車による上質な移動体験を提供する「GO PREMIUM」。
+        p.employee_premium_body ハロートーキョーでは、日本交通グループ内でのアルファード保有台数No.1という特長を活かし、
+          span.gold GO PREMIUMドライバーを多く採用・育成
+          |しています。ハイグレード車両にふさわしいワンランク上のサービスをお客様に提供しましょう。
+
+
+
+
+  section#employee_safety.js-header-white
+    .employee_safety_inner
+      .employee_head.employee_safety_head
+        h3.ja 安心／安全
+        span.en.barlow SAFETY
+        span.line
+
+      .employee_safety_blk
+        .employee_safety_item
+          p.employee_safety_lead 安全・安心も
+            br
+            |ハイグレードを約束
+
+        .employee_safety_item
+          ul.employee_safety_list
+            - var num = 1
+            li.employee_safety_list_item
+              .inner
+                span.icon
+                  img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/safety-' + num + '-icon-1.png')
+                p.title 最新の
+                  span.gold カーナビ
+                  |を完備
+            - num++
+
+            li.employee_safety_list_item
+              .inner
+                span.icon
+                  img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/safety-' + num + '-icon-1.png')
+                p.title 全車
+                  span.gold ドラレコ
+                  |・車内カメラ完備
+            - num++
+
+            li.employee_safety_list_item
+              .inner
+                span.icon
+                  img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/safety-' + num + '-icon-1.png')
+                p.title
+                  span.gold 自社整備工場
+                  |での定期点検
+            - num++
+
+            li.employee_safety_list_item
+              .inner
+                span.icon
+                  img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/safety-' + num + '-icon-1.png')
+                p.title
+                  span.gold GO Pay
+                  |によるスマートな決済
+            - num++
+
+            li.employee_safety_list_item
+              .inner
+                span.icon
+                  img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/safety-' + num + '-icon-1.png')
+                p.title 二種免許取得は会社が
+                  span.gold 全額負担
+            - num++
+
+            li.employee_safety_list_item
+              .inner
+                span.icon
+                  img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/safety-' + num + '-icon-1.png')
+                p.title
+                  span.gold 社会保険完備
+                  |など充実の福利厚生
+              a.m-btn-1.employee_safety_btn.__narrow(href!='<?php echo esc_url( home_url( "/" ) ); ?>welfare/')
+                span.m-btn-1__arrow
+                  span
+                span.m-btn-1__text 詳しく見る
+            - num++
+
+
+
+  section#employee_voice.js-header-white
+    .employee_voice_inner
+      .employee_head.employee_voice_head
+        h3.ja ドライバーの声
+        span.en.barlow VOICE
+        span.line
+
+    .voice_link_list
+      .voice_link_item._item01
+        a(href='../voice/voice01/')
+          .voice_link_item_shadow
+          .voice_link_item_inner
+            p.title 自分もお客様も
+              br
+              |気持ちよくなれるサービスを
+            p.year 2023年入社
+            p.name
+              span O・M
+              |さん
+            .btn_area
+              .btn_standard._white_border._short
+                span.arrow
+                  span
+                span.text 詳しくみる
+      .voice_link_item._item02
+        a(href='../voice/voice02/')
+          .voice_link_item_shadow
+          .voice_link_item_inner
+            p.title ドライバー歴が長いからこそ
+              br.sp
+              |感じる
+              br.pc
+              |仕事の楽しさと
+              br.sp
+              |職場の居心地のよさ
+            p.year 2006年入社
+            p.name
+              span T・Y
+              |さん
+            .btn_area
+              .btn_standard._white_border._short
+                span.arrow
+                  span
+                span.text 詳しくみる
+      .voice_link_item._item03
+        a(href='../voice/voice03/')
+          .voice_link_item_shadow
+          .voice_link_item_inner
+            p.title 再び選んだタクシードライバーへの道
+              br
+              |人も街も変化に富んだ充実の日々
+            p.year 2023年入社
+            p.name
+              span Y・T
+              |さん
+            .btn_area
+              .btn_standard._white_border._short
+                span.arrow
+                  span
+                span.text 詳しくみる
+  
+
+
+
+  section#employee_recruit
+    .employee_recruit_card
+      .employee_recruit_card_inner
+        .employee_head.__black.employee_recruit_head
+          h3.ja 募集要項
+          span.en.barlow RECRUITMENT
+          span.line
+
+        
+        dl.employee_recruit_list
+          dt 給与
+          dd 月給182,000円＋歩合給＋各種手当＋賞与
+            p.txt-1 未経験者は1年間の保証給制度あり
+            ul.list-1
+              li 配属後 3ヶ月間：月給40万円
+                br
+                span.note ※条件あり
+              li その後の9ヶ月間：月給35万円
+
+            ul.label-list
+              li 12ヶ月は保証給支給
+                br
+                |総額435万円
+              li 研修期間も
+                br
+                |日給10,000円を支給
+              li 賞与年３回
+            span.note ※ 保証給は業界未経験者のみが対象
+            p.txt-2 保証給制度を活用すれば、売上が安定するまでの間も安心して働くことができます
+
+          dt 勤務時間
+          dd 1ヵ月単位の変形労働時間制（週平均実働40時間）
+            br
+            |→ 1乗務あたり15時間半（別途休憩3時間）
+          dt 休日
+          dd 年200日以上（明け休み含む）
+          dt 福利厚生
+          dd
+            ul.list-2
+              li ●各種社会保険完備
+                br
+                span.note ※ 勤務時間による条件あり
+              li ●再雇用制度（75歳まで）
+              li ●研修制度充実
+                br
+                span.note ※ 研修センターを完備
+              li ●永年勤続表彰
+              li ●産休・育休制度
+              li ●各種手当
+              li ●有給休暇
+              li ●健康診断
+              li ●制服貸与
+              li ●資格取得補助
+                br
+                span.note ※ 会社負担で二種免許を取得
+              li ●交通費支給
+                br
+                span.note ※ 規定あり
+              li ●全車AT、カーナビ付
+              li ●屋内全面禁煙
+                br
+                span.note ※ 屋外喫煙スペースあり
+          dt 勤務地
+          dd 東京都江戸川区臨海町6-3-10
+            ul.label-list
+              li.short 転勤なし
+              li.short バイク／自転車通勤OK
+          dt 本社への
+            br.m-md
+            |アクセス方法
+          dd 葛西臨海公園駅より徒歩4分
+        .video
+          iframe(
+            src="https://www.youtube.com/embed/jgmUx62kqHU?si=X9WDHzykKILKVjn2" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+          )
+
+|<?php get_footer(); ?>

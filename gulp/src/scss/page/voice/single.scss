@@ -1,0 +1,415 @@
+// Voice単一ページ用のスタイル
+
+// Core mixinのインポート
+@import "../../../scss/_core/_mixin";
+
+// ベーススタイル
+.contents_inner {
+  margin: 0px auto;
+}
+
+// ページビジュアルタイトル
+.page_visual {
+  &_title {
+    &_en {
+      .num {
+        color: #282828;
+        text-shadow: 0.9px 0.9px 0 #FFF, -0.9px -0.9px 0 #FFF, -0.9px 0.9px 0 #FFF, 0.9px -0.9px 0 #FFF, 0px 0.9px 0 #FFF, 0 -0.9px 0 #FFF, -0.9px 0 0 #FFF, 0.9px 0 0 #FFF;
+      }
+    }
+
+    &_year {
+      padding-top: 35px;
+      font-size: 1.8rem;
+      font-weight: 700;
+
+      @include mq(md) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &_name {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+
+      @include mq(md) {
+        font-size: 5rem;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+      }
+      span {
+        padding-left: 0.3em;
+        font-size: 50%;
+
+        @include mq(md) {
+          font-size: 2rem;
+        }
+        @include mq(lg) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    &_ruby {
+      font-size: 1.5rem;
+      @include mq(md) {
+        font-size: 2rem;
+      }
+    }
+
+    &_sub {
+      margin-top: 20px;
+      @include mq(md) {
+        margin-top: 80px;
+      }
+      @include mq(lg) {
+        margin-top: 100px;
+      }
+    }
+
+    // 境界線スタイル
+    ._border {
+      text-shadow: 0.9px 0.9px 0 #FFF, -0.9px -0.9px 0 #FFF, -0.9px 0.9px 0 #FFF, 0.9px -0.9px 0 #FFF, 0px 0.9px 0 #FFF, 0 -0.9px 0 #FFF, -0.9px 0 0 #FFF, 0.9px 0 0 #FFF;
+    }
+  }
+
+  // ビジュアル画像
+  &_img {
+    padding-top: 60px;
+    @include mq(md) {
+      padding-top: 0;
+    }
+  }
+}
+
+// Voiceセクション
+#voice_section {
+  @include mq(sm-max) {
+    padding-top: 80px;
+  }
+  @include mq(md) {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  &:not(:last-child) {
+    padding-bottom: 0px;
+  }
+}
+
+// Voice コンテンツ
+.voice_content {
+  @include mq(md) {
+    display: flex;
+  }
+
+  // 複数コンテンツの間隔
+  & + .voice_content {
+    padding-top: 80px;
+    @include mq(md) {
+      padding-top: 30px;
+    }
+    @include mq(lg) {
+      padding-top: 50px;
+    }
+  }
+
+  // タイトルスタイル調整
+  .content_title {
+    .title {
+      @include mq(lg-max) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  // 画像エリア
+  &_img {
+    @include mq(sm-max) {
+      margin-top: 30px;
+    }
+    @include mq(md) {
+      width: 50%;
+    }
+    @include mq(lg) {
+      width: 45%;
+    }
+
+    .img {
+      @include mq(sm-max) {
+        width: 100%;
+        height: 110vw;
+      }
+      @include mq(md) {
+        height: 100%;
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+      &.left {
+        object-position: center left;
+      }
+      &.right {
+        object-position: center right;
+      }
+    }
+  }
+
+  // コンテンツボックス
+  &_box {
+    @include mq(md) {
+      flex: 1;
+      padding: 50px 5% 50px 5%;
+      @include flexbox;
+      @include align-items(center);
+    }
+    @include mq(lg) {
+      padding: 50px 7.5%;
+    }
+    @include mq(xl) {
+      padding: 80px 7.5%;
+    }
+    @include mq(xxl) {
+      padding: 80px 100px;
+    }
+
+    &_inner {
+      @include mq(lg) {
+        max-width: 530px;
+      }
+    }
+  }
+
+  // 偶数・奇数要素のレイアウト調整
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .voice_content_img {
+      @include mq(sm-max) {
+        margin-right: -5vw;
+      }
+    }
+    .voice_content_box_inner {
+      @include mq(lg) {
+        margin-right: auto;
+      }
+    }
+  }
+
+  &:nth-child(2n) {
+    .voice_content_img {
+      @include mq(sm-max) {
+        margin-left: -5vw;
+      }
+    }
+    .voice_content_box_inner {
+      @include mq(lg) {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// イントロテキスト
+.voice_content_intro_text {
+  letter-spacing: 0.04em;
+  & + .voice_content_intro_text {
+    margin-top: 1.2em;
+  }
+}
+
+// ボトムコンテンツエリア
+.voice_content_bottom {
+  padding: 60px 0vw 0px 0vw;
+  @include mq(md) {
+    padding: 70px 30px 0px 30px;
+  }
+  @include mq(lg) {
+    padding: 80px 35px 0px 35px;
+  }
+  @include mq(xl) {
+    padding: 100px 40px 0px 40px;
+  }
+  &_inner {
+    max-width: 1100px;
+    margin: 0px auto;
+  }
+}
+
+// ボトムセクション
+#voice_section_bottom {
+  padding-left: 0;
+  padding-right: 0;
+  .contents_inner {
+    width: 100%;
+    padding: 0 5vw;
+    @include mq(md) {
+      padding: 0 5%;
+    }
+    @include mq(lg) {
+      padding: 0 12.5%;
+    }
+    @include mq(xl) {
+      padding: 0 12.5%;
+    }
+    @include mq(xxl) {
+      padding: 0 210px;
+    }
+  }
+  .voice_content {
+    display: block;
+    width: 100%;
+  }
+  .voice_content_box {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .voice_content_box_inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .voice_content_intro_text {
+    letter-spacing: 0.05em;
+    font-feature-settings: normal;
+  }
+}
+
+// Voice リンクリスト
+.voice_link_list {
+  max-width: 1100px;
+  margin: 0 auto;
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+// リストアイテム
+.voice_link_list_item {
+  position: relative;
+
+  .item_img {
+    .img img {
+      aspect-ratio: 340/400;
+      width: 100%;
+    }
+  }
+
+  .item_text {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 3.5%;
+    left: 5%;
+    color: #FFF;
+    z-index: 5;
+    letter-spacing: 0.08em;
+  }
+  .item_text_en {
+    font-size: 3.5rem;
+    span {
+      font-size: 6.1rem;
+      vertical-align: bottom;
+    }
+    @include mq(md) {
+      font-size: 2.5rem;
+      span {
+        font-size: 4.3rem;
+      }
+    }
+    @include mq(custom, 980px) {
+      font-size: 3.5rem;
+      span {
+        font-size: 6.1rem;
+      }
+    }
+  }
+  .item_text_name {
+    margin-top: 0.25em;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    @include mq(md) {
+      font-size: 3.7rem;
+    }
+    @include mq(custom, 980px) {
+      font-size: 5rem;
+      letter-spacing: 0.1em;
+    }
+    span {
+      padding-left: 0.15em;
+      font-size: 50%;
+      @include mq(md) {
+        font-size: 2rem;
+      }
+      @include mq(lg) {
+        font-size: 3rem;
+      }
+    }
+  }
+  .item_text_ruby {
+    font-size: 2rem;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
+    @include mq(custom, 980px) {
+      font-size: 2rem;
+    }
+  }
+  & + .voice_link_list_item {
+    margin-top: 20px;
+    @include mq(md) {
+      margin-top: 0;
+    }
+  }
+
+  // カバー状態のスタイル
+  &._cover {
+    &:before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      background-color: #282828;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      opacity: 0.5;
+    }
+  }
+
+  // 通常状態のホバーエフェクト
+  &:not(._cover) {
+    .item_link {
+      &:after {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        background-color: #FFF;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transition: all 0.4s ease;
+        opacity: 0;
+      }
+      @include mq(lg) {
+        &:hover {
+          &:after {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+} 

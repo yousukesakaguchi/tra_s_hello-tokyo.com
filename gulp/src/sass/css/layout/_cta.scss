@@ -1,0 +1,86 @@
+#cta {
+  @include min-screen($breakpoint-md) {
+    display: flex;
+  }
+}
+
+.cta-item {
+  @include liquidSize(height, 572, 562);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+  @include min-screen($breakpoint-md) {
+    width: 50%;
+  }
+
+  &.taxi {
+    background-image: url(../assets/img/common/bg-cta-taxi-1.jpg);
+  }
+  &.recruit {
+    background-image: url(../assets/img/common/bg-cta-recruit-1.jpg);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.39);
+    mix-blend-mode: multiply;
+  }
+}
+
+.cta-item__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include liquidSize(padding-top, 70, 60);
+}
+
+.cta-item__title {
+  text-align: center;
+  .en {
+    @include liquidSize(font-size, 47, 47);
+    display: block;
+    @include liquidSize(margin-bottom, 10, 6);
+    line-height: 1.72;
+    letter-spacing: 0.059em;
+  }
+  .ja {
+    @include liquidSize(font-size, 60, 60);
+    display: block;
+    @include liquidSize(margin-bottom, 34, 24);
+    font-weight:700; /* bold */
+    line-height: 1.4;
+  }
+}
+
+.cta-item__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .text {
+    line-height: 1.61;
+    text-align: center;
+    @include liquidSize(font-size, 18, 22);
+    font-weight:700; /* bold */
+    @include liquidSize(margin-bottom, 12, 14);
+  }
+  .tel {
+    @include liquidSize(font-size, 66, 66);
+    font-weight:700; /* bold */
+    letter-spacing: 0.059em;
+    color: #fff;
+    line-height: 1;
+  }
+  .btn {
+    @include liquidSize(margin-top, 26, 26 );
+  } 
+}

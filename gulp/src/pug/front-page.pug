@@ -1,0 +1,171 @@
+include inc/_config.pug
+|<?php 
+|/**
+|* @package WordPress 
+|* Template Name: トップ
+|*/
+|get_header()
+|?> 
+
+
+main#main
+
+  section#fv.js-header-white
+    .contents_inner
+      p.fv_title
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/top/fv_text.svg' alt='アルファード 保有数 日本交通グループ内 No.1')
+      .fv_player
+        video#video.video-js(poster!='<?php echo get_template_directory_uri(); ?>/assets/img/top/thumbnail.webp' autoplay loop muted playsinline)
+
+
+
+  section#intro
+    .intro-inner
+      .intro_title
+        span.en.barlow HELLO TOKYO
+
+      .lead-area
+        p.lead ハロー、
+          br
+          |想像以上
+        .intro_text
+          p.text タクシー業界最大手の日本交通グループに属する株式会社ハロートーキョーは、2003年の創業以来ずっとラグジュアリー路線を走り続けてきました。
+          p.text 近年は、GO株式会社とコラボした『Go Reserve』のフラッグシップ企業となり、想像以上の成長と進化、そして想像以上の「働き方」を実現しています。
+
+
+
+  section#benefit-1.benefit
+    .benefit_inner
+      span.barlow.benefit_label BENEFIT 01
+      h3.benefit_title
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-1-title-1.svg' alt='業界No.1日本交通グループ')
+
+      figure.benefit_img
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-1-fig-1.jpg')
+
+      p.benefit_lead
+        span.gold “桜にN”
+        |を掲げ
+        br.m-sm
+        spna.gold 高品質
+        |を約束します
+      p.benefit_body 高品質なサービスを提供する日本交通の“桜にN”を掲げ、タクシーでありながらハイヤーと同等のサービスを提供し続けています。
+
+
+
+  section#benefit-2.benefit
+    .benefit_inner
+      span.barlow.benefit_label BENEFIT 02
+      h3.benefit_title
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-2-title-1.svg' alt='アルファード保有数日本交通グループ内No.1')
+      figure.benefit_img
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-2-fig-1.jpg')
+      p.benefit_lead 移動にほんの少しの
+        span.gold 贅沢感
+        |を
+      p.benefit_body 100%アプリ配車による上質な送迎サービスを提供。おもてなしとは何かを追求し続け「質で日本一」を目指します！
+
+      a.m-btn-1.__black.benefit_btn(href!='<?php echo esc_url( home_url( "/" ) ); ?>about/')
+        span.m-btn-1__arrow
+          span
+        span.m-btn-1__text ハロートーキョーについて
+
+
+
+  section#concept
+    .concept_inner
+      h3.concept_title
+        span.title-1
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-1.svg' alt='タクシー')
+        span.title-2
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-2.svg' alt='')
+        span.title-3
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-3.svg' alt='モビリティビジネス')
+      p.concept_body ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー
+
+
+
+  section#recruit
+    .recruit_item.employee
+      .recruit_item_inner
+        span.recruit_icon
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/recruit-1-icon-1.png')
+        h3.recruit_title 正社員募集
+        p.recruit_body ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー
+        a.m-btn-1.recruit_btn(href!='<?php echo esc_url( home_url( "/" ) ); ?>employee/')
+          span.m-btn-1__arrow
+            span
+          span.m-btn-1__text 詳しく見る
+
+    .recruit_item.parttime
+      .recruit_item_inner
+        span.recruit_icon
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/home/recruit-2-icon-1.png')
+        h3.recruit_title アルバイト・副業
+        p.recruit_body ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー
+        a.m-btn-1.recruit_btn(href!='<?php echo esc_url( home_url( "/" ) ); ?>parttime/')
+          span.m-btn-1__arrow
+            span
+          span.m-btn-1__text 詳しく見る
+
+
+
+  section#voice
+    .voice_inner
+      h3.voice_title
+        span.ja ドライバーの声
+        span.en.barlow VOICE
+        span.line
+      p.voice_lead ドライバーたちのリアルな日常
+      p.voice_body 100%日々業務に取り組むドライバーたちに、仕事の面白みや、ハロートーキョーの魅力などを語ってもらいました！
+      a.m-btn-1.voice_btn(href!='<?php echo esc_url( home_url( "/" ) ); ?>voice/')
+        span.m-btn-1__arrow
+          span
+        span.m-btn-1__text ドライバーの声一覧
+
+
+
+  |<?php
+  |	$paged = (int) get_query_var('paged');
+  |	$args = array(
+  |		'post_type' => 'post',
+  |		'paged' => $paged,
+  |		'posts_per_page' => 3,
+  |	);
+  |	$the_query = new WP_Query( $args );
+  |
+  |	if( $the_query -> have_posts() ) :
+  |?>
+
+  section#top_information
+    .contents_inner
+      .top_information_title
+        h2.en._poppins INFORMATION
+      .top_information_list
+        |<?php while($the_query -> have_posts()) : $the_query -> the_post(); ?>
+        .top_information_item
+          .img
+            a(href!='<?php echo get_permalink(); ?>')
+              |<?php if(has_post_thumbnail()): ?>
+              img(src!='<?php echo the_post_thumbnail_url( "thmbnail" ); ?>' alt='')
+              |<?php else: ?>
+              img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/news/dummy.jpg' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/news/dummy.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/news/dummy@2x.jpg 2x' width='260' height='160' alt='')
+              |<?php endif; ?>
+          .textbox
+            p.date!='<?php echo get_the_date("Y.m.d"); ?>'
+            p.title
+              a(href!='<?php the_permalink(); ?>')
+                span!='<?php the_title(); ?>'
+        |<?php endwhile;?>
+      .btn_area
+        a.btn_standard(href!='<?php echo esc_url( home_url( "/" ) ); ?>news/')
+          span.arrow
+            span
+          span.text 一覧を見る
+
+  |<?php endif; ?>
+|<?php get_footer(); ?>
+
+
+
+
