@@ -58,13 +58,27 @@
 #header {
   &.is-white {
     background: transparent;
-
-    @include min-screen($breakpoint-md) {
-      .logo {
-        img {
-          filter: brightness(0) invert(1);
+    .logo {
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+    @include max-screen($breakpoint-sm) {
+      .h_head {
+        background: transparent;
+      }
+      .global_nav_border {
+        &:before,
+        &:after {
+          background-color: #fff;
         }
       }
+      .global_nav_text {
+        color: #fff;
+      }
+    }
+    @include min-screen($breakpoint-md) {
+
       .global_nav_link {
         color: #fff;
       }

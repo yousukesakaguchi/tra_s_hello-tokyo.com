@@ -36,6 +36,10 @@ input,
 section {
   padding: 0;
 }
+
+img {
+  width: 100%;
+}
 //インクルードファイル
 //@import "utility/reset.scss"; //リセット
 @import "utility/media.scss"; //ブレイクポイント
@@ -60,6 +64,8 @@ section {
 
 
 @import "pages/_home.scss";
+@import "pages/_employee.scss";
+@import "pages/_parttime.scss";
 //@import "pages/_contact.scss";
 //@import "pages/_privacypolicy.scss";
 
