@@ -6,7 +6,7 @@
 get_header()
 ?>
 <main id="main">
-  <section class="js-header-white" id="fv">
+  <section class="js-header-white is-anim-sec" id="fv">
     <div class="contents_inner">
       <p class="fv_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/fv_text.svg" alt="アルファード 保有数 日本交通グループ内 No.1" /></p>
       <div class="fv_player">
@@ -14,7 +14,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section id="intro">
+  <section class="is-anim-sec" id="intro">
     <div class="intro-inner">
       <div class="intro_title"><span class="en barlow">HELLO TOKYO</span></div>
       <div class="lead-area">
@@ -26,17 +26,17 @@ get_header()
       </div>
     </div>
   </section>
-  <section class="benefit" id="benefit-1">
+  <section class="benefit is-anim-sec" id="benefit-1">
     <div class="benefit_inner"><span class="barlow benefit_label">BENEFIT 01</span>
       <h3 class="benefit_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-1-title-1.svg" alt="業界No.1日本交通グループ" /></h3>
       <figure class="benefit_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-1-fig-1.jpg" /></figure>
-      <p class="benefit_lead"><span class="gold">“桜にN”</span>を掲げ<br class="m-sm" />
+      <p class="benefit_lead"><span class="gold">"桜にN"</span>を掲げ<br class="m-sm" />
         <spna class="gold">高品質</spna>を約束します
       </p>
-      <p class="benefit_body">高品質なサービスを提供する日本交通の“桜にN”を掲げ、タクシーでありながらハイヤーと同等のサービスを提供し続けています。</p>
+      <p class="benefit_body">高品質なサービスを提供する日本交通の"桜にN"を掲げ、タクシーでありながらハイヤーと同等のサービスを提供し続けています。</p>
     </div>
   </section>
-  <section class="benefit" id="benefit-2">
+  <section class="benefit is-anim-sec" id="benefit-2">
     <div class="benefit_inner"><span class="barlow benefit_label">BENEFIT 02</span>
       <h3 class="benefit_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-2-title-1.svg" alt="アルファード保有数日本交通グループ内No.1" /></h3>
       <figure class="benefit_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/benefit-2-fig-1.jpg" /></figure>
@@ -44,13 +44,13 @@ get_header()
       <p class="benefit_body">100%アプリ配車による上質な送迎サービスを提供。おもてなしとは何かを追求し続け「質で日本一」を目指します！</p><a class="m-btn-1 __black benefit_btn" href="<?php echo esc_url( home_url( "/" ) ); ?>about/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">ハロートーキョーについて</span></a>
     </div>
   </section>
-  <section id="concept">
+  <section class="is-anim-sec" id="concept">
     <div class="concept_inner">
       <h3 class="concept_title"><span class="title-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-1.svg" alt="タクシー" /></span><span class="title-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-2.svg" alt="" /></span><span class="title-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept-title-3.svg" alt="モビリティビジネス" /></span></h3>
-      <p class="concept_body">ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー</p>
+      <p class="concept_body">ダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピーダミーコピー</p>
     </div>
   </section>
-  <section id="recruit">
+  <section class="is-anim-sec" id="recruit">
     <div class="recruit_item employee">
       <div class="recruit_item_inner"><span class="recruit_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/recruit-1-icon-1.png" /></span>
         <h3 class="recruit_title">正社員募集</h3>
@@ -64,7 +64,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section id="voice">
+  <section class="is-anim-sec" id="voice">
     <div class="voice_inner">
       <h3 class="voice_title"><span class="ja">ドライバーの声</span><span class="en barlow">VOICE</span><span class="line"></span></h3>
       <p class="voice_lead">ドライバーたちのリアルな日常</p>
@@ -81,7 +81,7 @@ get_header()
   
   	if( $the_query -> have_posts() ) :
   ?>
-  <section id="top_information">
+  <section class="is-anim-sec" id="top_information">
     <div class="contents_inner">
       <div class="top_information_title">
         <h2 class="en _poppins">INFORMATION</h2>
