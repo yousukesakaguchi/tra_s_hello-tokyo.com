@@ -9,7 +9,7 @@ body {
 }
 
 
-#kv {
+#employee-kv {
   @include liquidSize(height, 800, 1504);
   position: relative;
   box-sizing: border-box;
@@ -787,6 +787,33 @@ body {
     }
   }
 
+  &._item04 {
+    a {
+      &:before {
+        background-image: url("../assets/img/voice/index/bg_img04_sp.webp");
+        @media screen and (min-width: 768px) {
+          background-image: url("../assets/img/voice/index/bg_img04.webp");
+        }
+      }
+      &:after {
+        background-image: url("../assets/img/voice/index/bg_img04_hover.webp");
+      }
+    }
+  }
+
+  &._item05 {
+    a {
+      &:before {
+        background-image: url("../assets/img/voice/index/bg_img05_sp.webp");
+        @media screen and (min-width: 768px) {
+          background-image: url("../assets/img/voice/index/bg_img05.webp");
+        }
+      }
+      &:after {
+        background-image: url("../assets/img/voice/index/bg_img05_hover.webp");
+      }
+    }
+  }
   &_shadow {
     position: absolute;
     z-index: 11;
@@ -900,7 +927,7 @@ body {
         .arrow {
           span {
             &:after {
-              background-image: url(../img/icon/arrow_white.svg);
+              background-image: url(../assets/img/icon/arrow_white.svg);
             }
           }
         }

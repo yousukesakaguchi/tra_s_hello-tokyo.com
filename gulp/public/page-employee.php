@@ -6,7 +6,7 @@
 get_header()
 ?>
 <main class="employee" id="main">
-  <section class="js-header-white" id="kv">
+  <section class="js-header-white" id="employee-kv">
     <div class="employee-kv_inner">
       <div id="employee-kv_title">
         <h1><span class="employee-kv_title-label">未経験者歓迎</span>

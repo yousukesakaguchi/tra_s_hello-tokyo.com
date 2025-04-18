@@ -205,8 +205,8 @@
 		<div class="page_visual_content">
 			<div class="page_visual_title">
 				<p class="page_visual_title_en _poppins"><span class="first">V</span>OICE<span class="num">04</span></p>
-				<p class="page_visual_title_year _border">2023年入社</p>
-				<p class="page_visual_title_name _border">O・M<span>さん</span></p>
+				<p class="page_visual_title_year _border">2024年入社</p>
+				<p class="page_visual_title_name _border">Y・M<span>さん</span></p>
 				<!-- <p class="page_visual_title_ruby _border">YOKOGAWA TAKUMI</p> -->
 				<p class="page_visual_title_sub _border">気軽に始めて見つけた、<br>
 					ぴったりの仕事<br>

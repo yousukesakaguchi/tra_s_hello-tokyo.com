@@ -6,77 +6,328 @@
 |get_header()
 |?>
 main#main.parttime
-  section#kv.js-header-white
-    .employee-kv_inner
-      #employee-kv_title
+  section#parttime-kv.js-header-white
+    .parttime-kv_inner
+      #parttime-kv_title
         h1
-          span.employee-kv_title-label 未経験者歓迎
-          p.employee-kv_title-text [ ノルマなし ]  &amp;  [ 流し営業なし ] のハイグレードドライバーへ
-        .kv-cross
-          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-cross-1.svg')
+          picture.parttime-kv_title-copy
+            source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-copy-1__sm.svg')
+            img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-copy-1__md.svg' alt='[ 本業 ] ＋ [ GO Crew ]')
+          span.parttime-kv_title-label アルバイト／副業の新しいカタチ
+      .parttime-kv_line
+        h2
+          span.parttime-kv_line-1
+            img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-line-1.svg' alt='スキマ時間の')
+          span.parttime-kv_script-1
+            img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-script-1.png' alt='NNEW WORK STYLE @HELLO TOKYO')
+          span.parttime-kv_logo-1
+            img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-logo-1.png' alt='GO Reserve')
+          span.parttime-kv_line-2
+            img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-line-2.svg' alt='新しい働き方')
+    .parttime-kv_circle
+      picture.parttime-kv_circle-bg
+        source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-car-1__sm.png')
+        img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-car-1__md.png' alt='GO Reserve')
+    .parttime-kv_bg
 
-      h2#employee-kv_title-1
-        picture
-          source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-1__sm.svg')
-          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-1__md.svg' alt='高級 アルファード保有台数No.1')
-      h2#employee-kv_title-2
-        picture
-          source(media!='(max-width: 768px)' srcset!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-2__sm.svg')
-          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/employee/kv-title-2__md.svg' alt='高給 独自の給与制度&還元率')
-
-    .employee-kv_bg
 
 
 
-  section#employee_advantages.js-header-white
-    .employee_advantages_inner
-      .employee_head.employee_advantages_head
-        h3.ja 働くメリット
-        span.en.barlow ADVANTAGES
-        span.line
+  section#parttime_intro.js-header-white
+    .parttime_intro_inner
+      .parttime_intro_left
+        .parttime_intro_badge 最新の移動サービスを支える
+        .parttime_intro_car-image
+          img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/intro-car-1.png' alt="GO Reserve タクシー")
+        
+      .parttime_intro_right
+        p.parttime_intro_text
+          | GO株式会社と日本交通グループのコラボレーションにより実現したGO Reserveにおいて、
+          span.parttime_intro_highlight ハロートーキョーはフラッグシップ企業に抜擢されました。
+        p.parttime_intro_text
+          | 募集中の「GO Crew」は、GO Reserve（タクシー）とGOシャトル（乗り合いワンボックス）専用のドライバーだから、
+          span.parttime_intro_highlight 路上でタクシーをお探しのお客様をお乗せすることはありません。
+          | ライフスタイルや本業の「スキマ時間」が活用できる新しい働き方を提案します。
 
-      .employee_advantages_blk
-        p.employee_advantages_lead 最高級の車で
+
+
+  section.parttime-service
+    section.parttime-service__go-reserve
+      .go-reserve__inner
+        .go-reserve__info
+          img.go-reserve__logo(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/go-reserve-logo.png' alt="GO Reserve ロゴ")
+
+          .go-reserve__text-box
+            h3.go-reserve__title 流しなしの
+              br.m-sm
+              |「アプリ専用車両」が相棒
+            p.go-reserve__text
+            | 乗務する青色ボディのタクシーは「GOアプリ」専用車両。路上でタクシーをお探しのお客様を乗せることはなく、アプリで目的地が入力された配車のみを受け付けるので、特別な稼がない限りはナビと解決済の業務でOKです。
+        //-.go-reserve__bg
+
+
+    section.parttime-service__go-shuttle.js-header-white
+      .go-shuttle__inner
+        .go-shuttle__info-box
+          .go-shuttle__logo
+            img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/go-shuttle-logo.png' alt="GO Shuttle ロゴ")
+          .go-shuttle__text-box
+            h3.go-shuttle__title まったく新しい
+              br.m-sm
+              |「相乗り」移動サービス
+            p.go-shuttle__text
+              |タクシーよりも安価に乗車できる「相乗りシャトル（3〜5人）」の事業を2024年末に開始。需要がある時間帯を中心に、2〜6kmの近距離の移動を、7人乗りのミニバン車両で行う最新の移動サービスです。
+
+
+
+  section#parttime_wwork.js-header-white
+    .parttime_wwork_inner
+
+      .parttime_wwork__header
+        .parttime_wwork__label スキマ時間の選択肢を広げる
+        h2.parttime_wwork__title Wワークのすすめ
+        p.parttime_wwork__description
+          | 本業や家事の予定が空いた時に少しの時間だけでもOK。あなたのスケジュールに合わせて自由に働けます。
+          | 学生や中心の単発系休業、用日勤務など特殊な働き方がネックとなり、選択肢として選べなかった
+          | タクシー業界風の仕事が、もっと身近なものになります。
+
+      .parttime_wwork__card-list 
+        -
+          var items = [
+            { label: '芸能・アーティスト活動', img: 'work-artist.jpg' },
+            { label: 'フードデリバリー', img: 'work-delivery.jpg' },
+            { label: '自営業・フリーランス', img: 'work-freelance.jpg' },
+            { label: '主婦・主夫', img: 'work-household.jpg' },
+            { label: 'カメラマン', img: 'work-camera.jpg' },
+            { label: 'アスリート', img: 'work-athlete.jpg' }
+          ]
+        each item in items
+          .parttime_wwork__card
+            .parttime_wwork__card-text
+              p.parttime_wwork__card-label [ #{item.label} ]
+              span.parttime_wwork__card-plus
+              span.parttime_wwork__card-title
+                img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/wwork-crew.svg' alt="GO Crew")
+            .parttime_wwork__card-image
+              img(src!='<?php echo get_template_directory_uri(); ?>/assets/img/parttime/'+item.img, alt=`${item.label}の写真`)
+
+
+
+
+  section#parttime_fulltime
+    .parttime_fulltime_inner
+      .parttime_fulltime_header
+        .parttime_fulltime_label 正社員登用制度
+        h2.parttime_fulltime_title GO Crewの経験を活かす
           br
-          |最上級の安定を
-        .employee_advantages_text
-          p.employee_advantages_body VIP送迎に強みを持つ事業者として独自路線の成長を遂げてきたハロートーキョーでは、
-            span.gold 従来のタクシー会社に対するイメージを一新。
-          p.employee_advantages_body 100％アプリ配車でハイグレードな送迎サービスを提供する会社ならではのメリットがいくつもあります。
+          |ハイグレードドライバーとしての
+          br
+          |正社員登用も可能！
+        p.parttime_fulltime_description サービス領域を拡大し続ける日本交通グループのハロートーキョーでは、正社員としてアルファードに乗務するハイグレードドライバーへの登用も積極的に行っています。誰もが安心して働ける環境、安定して稼げる制度を整えていますので、GO Crewの経験を活かしたステップアップもご検討ください。
 
-      ul.employee_advantages_list
-        li.employee_advantages_item._item-1
+        a.m-btn-1.parttime_fulltime_button._semi-square(href!='<?php echo esc_url( home_url( "/" ) ); ?>parttime/')
+          span.m-btn-1__arrow
+            span
+          span.m-btn-1__text 正社員募集ページ
+
+
+
+  section#parttime_workstyle.js-header-white
+    .parttime_workstyle_inner
+      .parttime_workstyle_header
+        .parttime_workstyle_label ワークスタイル
+        h2.parttime_workstyle_title ストレスフリーなワークスタイルが魅力
+
+      ul.parttime_workstyle_list
+        li.parttime_workstyle_item._item-1
           span.label.barlow
             span.num 01
             span.point POINT
-          .employee_advantages_item_content
-            span.title 100％アプリ配車だから
-            span.highlight 流し営業ゼロ
+          .parttime_workstyle_item_content
+            span.text-1 週3日以上
+            span.highlight 1回5時間
+            span.text-2 からOK!
 
-        li.employee_advantages_item._item-2
+        li.parttime_workstyle_item._item-2
           span.label.barlow
             span.num 02
             span.point POINT
-          .employee_advantages_item_content
-            span.title 自分らしく働ける
-            span.highlight ノルマ／集客なし
-        li.employee_advantages_item._item-3
+          .parttime_workstyle_item_content
+            span.text-1  6:00～24:00の間
+            span.highlight いつでも勤務
+            span.text-2 OK!
+        li.parttime_workstyle_item._item-3
           span.label.barlow
             span.num 03
             span.point POINT
-          .employee_advantages_item_content
-            span.title しっかり休める
-            span.highlight 年間休日209回以上
+          .parttime_workstyle_item_content
+            span.text-1 歩合制ではなく
+            span.highlight 時給制 ￥1,500／1h
+            span.text-2 22時～24時は1,875円！
 
-        li.employee_advantages_item._item-4
+        li.parttime_workstyle_item._item-4
           span.label.barlow
             span.num 04
             span.point POINT
-          .employee_advantages_item_content
-            span.title 保証給
-            span.highlight 435万円／年
-            span.note ※1年目
+          .parttime_workstyle_item_content
+            span.text-1 業務は
+            span.highlight 専用ジャケット
+            span.text-2 を羽織るだけ!
 
+        li.parttime_workstyle_item._item-5
+          span.label.barlow
+            span.num 05
+            span.point POINT
+          .parttime_workstyle_item_content
+            span.text-1 アプリ経由
+            span.highlight 目的地入力予約のみ
+            span.text-2 配車だからラクラク！!
+
+        li.parttime_workstyle_item._item-6
+          span.label.barlow
+            span.num 06
+            span.point POINT
+          .parttime_workstyle_item_content
+            span.highlight 社会保険完備
+            span.text-2 など充実の福利厚生
+            a.m-btn-1.parttime_workstyle_btn.__narrow(href!='<?php echo esc_url( home_url( "/" ) ); ?>welfare/')
+              span.m-btn-1__arrow
+                span
+              span.m-btn-1__text 詳しく見る
+
+
+
+
+  section#parttime_flow.js-header-white
+    .parttime_flow_inner
+      .parttime_flow_header
+        .parttime_flow_label 1日の流れ
+        h2.parttime_flow_title 予定が空いた時に、
+          br.m-sm
+          |少しの時間だけ。
+          br
+          |当日参加もOK！
+
+      p.parttime_flow_list-title 7:00〜13：00シフトのタイムスケジュール
+
+      ul.parttime_flow_list
+        li.parttime_flow_item
+          span.parttime_flow_item_time.barlow 7:00-7:15
+          span.parttime_flow_item_content アルコール/血圧チェックなど
+        li.parttime_flow_item
+          span.parttime_flow_item_time.barlow 7:15-7:30
+          span.parttime_flow_item_content 点呼
+        li.parttime_flow_item
+          span.parttime_flow_item_time.barlow 7:30-8:00
+          span.parttime_flow_item_content 車両点検
+        li.parttime_flow_item
+          span.parttime_flow_item_time.barlow 8:00-12:30
+          span.parttime_flow_item_content 乗務
+        li.parttime_flow_item
+          span.parttime_flow_item_time.barlow 12:30-13:00
+          span.parttime_flow_item_content 帰庫
+
+      .parttime_flow_button-box
+        span.balloon 育成実績1万人以上の
+          br.m-sm
+          |研修プログラムあり
+        a.m-btn-2.parttime_flow_button(href!='<?php echo esc_url( home_url( "/" ) ); ?>welfare/')
+          span.m-btn-2__text 研修制度・福利厚生について
+          span.m-btn-2__arrow
+            span
+
+
+
+  section#parttime_voice
+    .voice_link_list
+      .voice_link_item._item04
+        a(href='../voice/voice04/')
+          .voice_link_item_shadow
+          .voice_link_item_inner
+            p.title 気軽に始めて見つけた、
+              br.m-sm
+              |ぴったりの仕事
+              br
+              |GO Crew から
+              br.m-sm
+              |正社員にステップアップ
+            p.year 2023年入社
+            p.name
+              span Y・M
+              |さん
+            .btn_area
+              .btn_standard._white_border._short
+                span.arrow
+                  span
+                span.text 詳しくみる
+      .voice_link_item._item05
+        a(href='../voice/voice05/')
+          .voice_link_item_shadow
+          .voice_link_item_inner
+            p.title オリンピック競技引退後、
+              br
+              |模索したセカンドキャリア
+            p.year 2023年入社
+            p.name
+              span K・N
+              |さん
+            .btn_area
+              .btn_standard._white_border._short
+                span.arrow
+                  span
+                span.text 詳しくみる
+
+
+
+
+
+  section#parttime_recruit
+    .parttime_recruit_card
+      .parttime_recruit_card_inner
+        .parttime_head.__black.parttime_recruit_head
+          h3.ja 募集要項
+          span.en.barlow RECRUITMENT
+          span.line
+
+        
+        dl.parttime_recruit_list
+          dt 給与
+          dd 時給1500円以上＋交通費
+
+          dt シフト
+          dd 06:00 ~ 22:00
+            br
+            p.note ※ 週3日以上、1日5時間以上勤務できる方
+            p.note ※ 勤務時間は希望に合わせて調整する為、希望しないお時間帯の勤務は発生しません。
+
+          dt 勤務地
+          dd 東京都江東区枝川2-18-5
+
+          dt 福利厚生
+          dd
+            ul.list-2
+              li ●各種社会保険完備
+                br
+                span.note ※ 勤務時間による条件あり
+              li ●研修制度充実
+                br
+                span.note ※ 研修センターを完備
+              li ●各種手当
+              li ●有給休暇
+              li ●健康診断
+              li ●制服貸与
+              li ●扶養内勤務可能
+              li ●資格取得補助
+                br
+                span.note ※ 会社負担で二種免許を取得
+              li ●正社員登用制度
+              li ●交通費支給
+                br
+                span.note ※ 規定あり
+              li ●全車AT、カーナビ付
+              li ●屋内全面禁煙
+                br
+                span.note ※ 屋外喫煙スペースあり
 
 
 

@@ -148,6 +148,129 @@
       @include liquidSize(font-size, 12, 22);
     }
   }
+  &._semi-square {
+    @include liquidSize(width, 550, 550);
+    @include liquidSize(height, 70, 70);
+    @include liquidSize(border-radius, 4, 8);
+    font-weight: 700;
+    position: relative;
+    .m-btn-1__text {
+      @include liquidSize(font-size, 20, 32);
+    }
+    &:before {
+      @include liquidSize(border-radius, 4, 8);
+    }
+  }
 }
 
+
+
+.m-btn-2 {
+  @include liquidSize(width, 1100, 650);
+  @include liquidSize(height, 150, 150);
+  @include liquidSize(border-radius, 20, 20);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  @include max-screen($breakpoint-sm) {
+    border: solid 3px #fff;
+  }
+  @include min-screen($breakpoint-md) {
+    border: solid 5px #fff;
+  }
+  &:before,
+  &:after {
+    content: "";
+    width: 102%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:before {
+    @include liquidSize(border-radius, 20, 20);
+    background-color: #fff;
+    transform: translateX(-101%);
+    z-index: 1;
+  }
+
+  &:after {
+    //background-color: #282828;
+  }
+  .m-btn-2__text {
+    font-weight: 700;
+    line-height: 1;
+    @include liquidSize(font-size, 30, 30);
+    color: #fff;
+    font-weight:700; /* bold */
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .m-btn-2__arrow {
+    position: absolute;
+    @include liquidSize(right, 300, 40);
+    top: 50%;
+    z-index: 11;
+    @include liquidSize(width, 34, 34);
+    @include liquidSize(height, 15, 15);
+    @include liquidSize(margin-top, -5, -5);
+    span {
+      &:before,
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-size: contain;
+        transition: all 0.2s ease-in-out;
+      }
+      &:before {
+        background-image: url(../assets/img/icon/arrow_white.svg);
+      }
+      &:after {
+        background-image: url(../assets/img/icon/arrow.svg);
+        opacity: 0;
+      }
+    }
+  }
+
+  @include min-screen($breakpoint-md) {
+    &:hover {
+      color: #282828;
+      &:before {
+        transform: translateX(-1%);
+      }
+      .m-btn-2__text {
+        color: #282828;
+      }
+      .m-btn-2__arrow {
+        span {
+          &:before {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+          &:after {
+            opacity: 1;
+            transform: translateX(0%);
+          }
+
+        }   
+      }
+    }
+  }
+
+
+}
 
