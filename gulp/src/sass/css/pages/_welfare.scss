@@ -1,0 +1,60 @@
+body {
+  @include max-screen($breakpoint-sm) {
+    padding-top: 0;
+  }
+}
+
+#main.welfare {
+  overflow: hidden;
+  section {
+    &:not(#welfare_kv):not(#cta) {
+      padding: 60px 5vw;
+      @media screen and (min-width: 768px) {
+        padding: 70px 30px;
+      }
+      @media screen and (min-width: 1080px) {
+        padding: 100px 35px 100px 35px;
+      }
+      @media screen and (min-width: 1280px) {
+        padding: 120px 40px 120px 40px;
+      }
+    }
+  }
+}
+
+.welfare_kv__inner {
+  @include liquidSize(width, 1150, 650);
+  margin-left: auto;
+  margin-right: auto;
+}
+#welfare_kv {
+  //@include liquidSize(height, 1150, 1706);
+  position: relative;
+  box-sizing: border-box;
+  @include liquidSize(padding-top, 278, 320);
+
+}
+
+.welfare__title {
+  @include liquidSize(padding-bottom, 110, 110);
+  .ja {
+    @include liquidSize(font-size, 50, 60);
+    font-weight:700; /* bold */
+    display: block;
+    @include liquidSize(margin-bottom, 12, 16);
+  }
+  .en {
+    @include liquidSize(font-size, 18, 30);
+    font-weight:700; /* bold */
+    display: block;
+  }
+}
+
+.welfare_kv__img {
+  @include liquidSize(height, 657, 557);
+  width: 100%;
+  background-image: url(../assets/img/walfare/kv-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

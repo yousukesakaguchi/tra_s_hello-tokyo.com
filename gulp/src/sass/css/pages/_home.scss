@@ -165,10 +165,17 @@
     @include min-screen($breakpoint-md) {
       justify-content: space-between;
     }
+    .title-1 {
+      @include liquidSize(width, 463, none);
+    }
     .title-2 {
+      @include liquidSize(width, 63, none);
       @include max-screen($breakpoint-sm) {
         width: 10vw;
       }
+    }
+    .title-3 {
+      @include liquidSize(width, 463, none);
     }
   }
   .concept_body {

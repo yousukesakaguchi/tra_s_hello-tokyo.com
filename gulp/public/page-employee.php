@@ -6,7 +6,7 @@
 get_header()
 ?>
 <main class="employee" id="main">
-  <section class="js-header-white" id="employee-kv">
+  <section class="js-header-white is-anim-sec" id="employee-kv">
     <div class="employee-kv_inner">
       <div id="employee-kv_title">
         <h1><span class="employee-kv_title-label">未経験者歓迎</span>
@@ -27,7 +27,7 @@ get_header()
     </div>
     <div class="employee-kv_bg"></div>
   </section>
-  <section class="js-header-white" id="employee_intro">
+  <section class="js-header-white is-anim-sec" id="employee_intro">
     <div class="employee_intro_inner">
       <p class="employee_intro_lead">アルファードに乗る<br />ハイグレードドライバー<br />という仕事に</p>
       <figure class="employee_intro_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/employee/intro-fig-1.png" alt="" /></figure>
@@ -35,7 +35,7 @@ get_header()
       <p class="employee_intro_body">100%アプリ配車だから<span class="gold">流し営業はゼロ</span>。働きやすさも稼ぎやすさも叶えられるハイグレードドライバーに挑戦しませんか？</p>
     </div>
   </section>
-  <section class="js-header-white" id="employee_highclass">
+  <section class="js-header-white is-anim-sec" id="employee_highclass">
     <div class="employee_highclass_inner">
       <h3 class="employee_highclass_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/employee/highclass-title-1.svg" alt="高級のリアル" /></h3>
       <div class="employee_highclass_blk">
@@ -48,7 +48,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section class="js-header-white" id="employee_highsalary">
+  <section class="js-header-white is-anim-sec" id="employee_highsalary">
     <div class="employee_highsalary_inner">
       <h3 class="employee_highsalary_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/employee/highsalary-title-1.svg" alt="高給のリアル" /></h3>
       <div class="employee_highsalary_blk">
@@ -61,7 +61,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section class="js-header-white" id="employee_advantages">
+  <section class="js-header-white is-anim-sec" id="employee_advantages">
     <div class="employee_advantages_inner">
       <div class="employee_head employee_advantages_head">
         <h3 class="ja">働くメリット</h3><span class="en barlow">ADVANTAGES</span><span class="line"></span>
@@ -89,7 +89,7 @@ get_header()
       </ul>
     </div>
   </section>
-  <section class="js-header-white" id="employee_premium">
+  <section class="js-header-white is-anim-sec" id="employee_premium">
     <div class="employee_premium_inner">
       <h3 class="employee_premium_title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/employee/premium-title-1.png" alt="GO PREMIUM" /></h3>
       <figure class="employee_premium_fig"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/employee/premium-fig-1.png" /></figure>
@@ -100,7 +100,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section class="js-header-white" id="employee_safety">
+  <section class="js-header-white is-anim-sec" id="employee_safety">
     <div class="employee_safety_inner">
       <div class="employee_head employee_safety_head">
         <h3 class="ja">安心／安全</h3><span class="en barlow">SAFETY</span><span class="line"></span>
@@ -146,7 +146,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section class="js-header-white" id="employee_voice">
+  <section class="js-header-white is-anim-sec" id="employee_voice">
     <div class="employee_voice_inner">
       <div class="employee_head employee_voice_head">
         <h3 class="ja">ドライバーの声</h3><span class="en barlow">VOICE</span><span class="line"></span>
@@ -188,7 +188,7 @@ get_header()
         </a></div>
     </div>
   </section>
-  <section id="employee_recruit">
+  <section class="is-anim-sec" id="employee_recruit">
     <div class="employee_recruit_card">
       <div class="employee_recruit_card_inner">
         <div class="employee_head __black employee_recruit_head">

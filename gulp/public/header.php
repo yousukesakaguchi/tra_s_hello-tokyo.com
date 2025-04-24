@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/base.css">
 	<?php get_template_part('inc/css'); ?>
 
-	<?php if( is_home() || is_front_page() || is_page(array('employee','parttime','walfare')) ): ?>
+	<?php if( is_home() || is_front_page() || is_page(array('employee','parttime','walfare','voice','voice01','voice02','voice03', 'voice04', 'voice05')) ): ?>
 		<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/new-style.css">
 	<?php endif; ?>
 

@@ -6,7 +6,7 @@
 get_header()
 ?>
 <main class="parttime" id="main">
-  <section class="js-header-white" id="parttime-kv">
+  <section class="js-header-white is-anim-sec" id="parttime-kv">
     <div class="parttime-kv_inner">
       <div id="parttime-kv_title">
         <h1>
@@ -26,7 +26,7 @@ get_header()
     </div>
     <div class="parttime-kv_bg"></div>
   </section>
-  <section class="js-header-white" id="parttime_intro">
+  <section class="js-header-white is-anim-sec" id="parttime_intro">
     <div class="parttime_intro_inner">
       <div class="parttime_intro_left">
         <div class="parttime_intro_badge">最新の移動サービスを支える</div>
@@ -39,7 +39,7 @@ get_header()
     </div>
   </section>
   <section class="parttime-service">
-    <section class="parttime-service__go-reserve">
+    <section class="parttime-service__go-reserve is-anim-sec">
       <div class="go-reserve__inner">
         <div class="go-reserve__info"><img class="go-reserve__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/parttime/go-reserve-logo.png" alt="GO Reserve ロゴ" />
           <div class="go-reserve__text-box">
@@ -49,7 +49,7 @@ get_header()
         </div>
       </div>
     </section>
-    <section class="parttime-service__go-shuttle js-header-white">
+    <section class="parttime-service__go-shuttle js-header-white is-anim-sec">
       <div class="go-shuttle__inner">
         <div class="go-shuttle__info-box">
           <div class="go-shuttle__logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/parttime/go-shuttle-logo.png" alt="GO Shuttle ロゴ" /></div>
@@ -61,7 +61,7 @@ get_header()
       </div>
     </section>
   </section>
-  <section class="js-header-white" id="parttime_wwork">
+  <section class="js-header-white is-anim-sec" id="parttime_wwork">
     <div class="parttime_wwork_inner">
       <div class="parttime_wwork__header">
         <div class="parttime_wwork__label">スキマ時間の選択肢を広げる</div>
@@ -112,7 +112,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section id="parttime_fulltime">
+  <section class="is-anim-sec" id="parttime_fulltime">
     <div class="parttime_fulltime_inner">
       <div class="parttime_fulltime_header">
         <div class="parttime_fulltime_label">正社員登用制度</div>
@@ -121,7 +121,7 @@ get_header()
       </div>
     </div>
   </section>
-  <section class="js-header-white" id="parttime_workstyle">
+  <section class="js-header-white is-anim-sec" id="parttime_workstyle">
     <div class="parttime_workstyle_inner">
       <div class="parttime_workstyle_header">
         <div class="parttime_workstyle_label">ワークスタイル</div>
@@ -141,15 +141,15 @@ get_header()
           <div class="parttime_workstyle_item_content"><span class="text-1">業務は</span><span class="highlight">専用ジャケット</span><span class="text-2">を羽織るだけ!</span></div>
         </li>
         <li class="parttime_workstyle_item _item-5"><span class="label barlow"><span class="num">05</span><span class="point">POINT</span></span>
-          <div class="parttime_workstyle_item_content"><span class="text-1">アプリ経由</span><span class="highlight">目的地入力予約のみ</span><span class="text-2">配車だからラクラク！!</span></div>
+          <div class="parttime_workstyle_item_content"><span class="text-1">アプリ経由</span><span class="highlight">目的地入力予約のみ</span><span class="text-2">配車だからラクラク！！</span></div>
         </li>
         <li class="parttime_workstyle_item _item-6"><span class="label barlow"><span class="num">06</span><span class="point">POINT</span></span>
-          <div class="parttime_workstyle_item_content"><span class="highlight">社会保険完備</span><span class="text-2">など充実の福利厚生</span><a class="m-btn-1 parttime_workstyle_btn __narrow" href="<?php echo esc_url( home_url( "/" ) ); ?>welfare/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">詳しく見る</span></a></div>
+          <div class="parttime_workstyle_item_content"><span class="highlight">社会保険完備</span><span class="text-2">など充実の福利厚生</span><a class="m-btn-1 parttime_workstyle_btn __narrow" href="<?php echo esc_url( home_url( "/" ) ); ?>walfare/"><span class="m-btn-1__arrow"><span></span></span><span class="m-btn-1__text">詳しく見る</span></a></div>
         </li>
       </ul>
     </div>
   </section>
-  <section class="js-header-white" id="parttime_flow">
+  <section class="js-header-white is-anim-sec" id="parttime_flow">
     <div class="parttime_flow_inner">
       <div class="parttime_flow_header">
         <div class="parttime_flow_label">1日の流れ</div>
@@ -163,10 +163,10 @@ get_header()
         <li class="parttime_flow_item"><span class="parttime_flow_item_time barlow">8:00-12:30</span><span class="parttime_flow_item_content">乗務</span></li>
         <li class="parttime_flow_item"><span class="parttime_flow_item_time barlow">12:30-13:00</span><span class="parttime_flow_item_content">帰庫</span></li>
       </ul>
-      <div class="parttime_flow_button-box"><span class="balloon">育成実績1万人以上の<br class="m-sm" />研修プログラムあり</span><a class="m-btn-2 parttime_flow_button" href="<?php echo esc_url( home_url( "/" ) ); ?>welfare/"><span class="m-btn-2__text">研修制度・福利厚生について</span><span class="m-btn-2__arrow"><span></span></span></a></div>
+      <div class="parttime_flow_button-box"><span class="balloon">育成実績1万人以上の<br class="m-sm" />研修プログラムあり</span><a class="m-btn-2 parttime_flow_button" href="<?php echo esc_url( home_url( "/" ) ); ?>walfare/"><span class="m-btn-2__text">研修制度・福利厚生について</span><span class="m-btn-2__arrow"><span></span></span></a></div>
     </div>
   </section>
-  <section id="parttime_voice">
+  <section class="is-anim-sec" id="parttime_voice">
     <div class="voice_link_list">
       <div class="voice_link_item _item04"><a href="../voice/voice04/">
           <div class="voice_link_item_shadow"></div>
@@ -192,7 +192,7 @@ get_header()
         </a></div>
     </div>
   </section>
-  <section id="parttime_recruit">
+  <section class="is-anim-sec" id="parttime_recruit">
     <div class="parttime_recruit_card">
       <div class="parttime_recruit_card_inner">
         <div class="parttime_head __black parttime_recruit_head">

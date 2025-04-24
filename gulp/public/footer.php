@@ -1,6 +1,6 @@
 
 
-	<?php if( is_page(array('about','voice','voice01','voice02','voice03', 'voice04', 'voice05'))|| is_404()): ?>
+	<?php if( is_page(array('about'))|| is_404()): ?>
 		<?php get_template_part('inc/cta/link_recruit'); ?>
 	<?php endif; ?>
 
