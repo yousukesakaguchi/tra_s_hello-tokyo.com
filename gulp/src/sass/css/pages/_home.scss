@@ -215,7 +215,7 @@
     &.parttime {
       background-color: #00C4FF;
       .recruit_item_inner {
-        @include liquidSize(width, 480, 500);
+        @include liquidSize(width, 490, 500);
         margin: 0 auto;
       }
     }

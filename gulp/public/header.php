@@ -21,7 +21,7 @@
 	<?php get_template_part('inc/css'); ?>
 
 	<?php if( is_home() || is_front_page() || is_page(array('employee','parttime','walfare','voice','voice01','voice02','voice03', 'voice04', 'voice05')) ): ?>
-		<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/new-style.css">
+		<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/new-style.css?v=<?php echo filemtime(get_template_directory() . "/css/new-style.css"); ?>">
 	<?php endif; ?>
 
 	<!-- Google Tag Manager-->
@@ -77,7 +77,7 @@
 									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>employee/"><span>正社員募集</span></a>
 								</li>
 								<li class="global_nav_item">
-									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>アルバイト・副業</span></a>
+									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>パートタイム・副業</span></a>
 								</li>
 								<li class="global_nav_item">
 									<a class="global_nav_link" href="<?php echo esc_url( home_url( '/' ) ); ?>voice/"><span>ドライバーの声</span></a>

@@ -515,8 +515,8 @@ body {
 
 .employee_premium_fig {
   @include liquidSize(width, 735, 735);
-  @include liquidSize(height, 833, 833);
-  @include liquidSize(top, 83, none);
+  @include liquidSize(height, 899, 899);
+  @include liquidSize(top, 17, none);
   @include liquidSize(bottom, none, 0);
   @include liquidSize(right, none, -360);
   @include liquidSize(margin-left, 25, none);

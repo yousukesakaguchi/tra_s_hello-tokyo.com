@@ -1,7 +1,7 @@
 <?php 
 /**
 * @package WordPress 
-* Template Name: アルバイト・副業
+* Template Name: パートタイム・副業
 */
 get_header()
 ?>
@@ -12,7 +12,7 @@ get_header()
         <h1>
           <picture class="parttime-kv_title-copy">
             <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-copy-1__sm.svg" /><img src="<?php echo get_template_directory_uri(); ?>/assets/img/parttime/kv-copy-1__md.svg" alt="[ 本業 ] ＋ [ GO Crew ]" />
-          </picture><span class="parttime-kv_title-label">アルバイト／副業の新しいカタチ</span>
+          </picture><span class="parttime-kv_title-label">パートタイム／副業の新しいカタチ</span>
         </h1>
       </div>
       <div class="parttime-kv_line">
@@ -34,7 +34,7 @@ get_header()
       </div>
       <div class="parttime_intro_right">
         <p class="parttime_intro_text">GO株式会社と日本交通グループのコラボレーションにより実現したGO Reserveにおいて、<span class="parttime_intro_highlight">ハロートーキョーはフラッグシップ企業に抜擢されました。</span></p>
-        <p class="parttime_intro_text">募集中の「GO Crew」は、GO Reserve（タクシー）とGOシャトル（乗り合いワンボックス）専用のドライバーだから、<span class="parttime_intro_highlight">路上でタクシーをお探しのお客様をお乗せすることはありません。</span>ライフスタイルや本業の「スキマ時間」が活用できる新しい働き方を提案します。</p>
+        <p class="parttime_intro_text">募集中の「GO Crew」は、GO ReserveとGOシャトル（乗り合いワンボックス）専用のドライバーだから、<span class="parttime_intro_highlight">路上でタクシーをお探しのお客様をお乗せすることはありません。</span>ライフスタイルや本業の「スキマ時間」が活用できる新しい働き方を提案します。</p>
       </div>
     </div>
   </section>
@@ -44,7 +44,7 @@ get_header()
         <div class="go-reserve__info"><img class="go-reserve__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/parttime/go-reserve-logo.png" alt="GO Reserve ロゴ" />
           <div class="go-reserve__text-box">
             <h3 class="go-reserve__title">流しなしの<br class="m-sm" />「アプリ専用車両」が相棒</h3>
-            <p class="go-reserve__text"></p>乗務する青色ボディのタクシーは「GOアプリ」専用車両。路上でタクシーをお探しのお客様を乗せることはなく、アプリで目的地が入力された配車のみを受け付けるので、特別な稼がない限りはナビと解決済の業務でOKです。
+            <p class="go-reserve__text"></p>乗務する青色ボディのタクシーは「GOアプリ」専用車両。路上でタクシーをお探しのお客様を乗せることはなく、アプリで目的地が入力された配車のみを受け付けるので、特別な指示がない限りはナビ案内通りの乗務でOKです。
           </div>
         </div>
       </div>
@@ -173,7 +173,7 @@ get_header()
           <div class="voice_link_item_inner">
             <p class="title">気軽に始めて見つけた、<br class="m-sm" />ぴったりの仕事<br />GO Crew から<br class="m-sm" />正社員にステップアップ</p>
             <p class="year">2023年入社</p>
-            <p class="name"><span>Y・M</span>さん</p>
+            <p class="name"><span>H・M</span>さん</p>
             <div class="btn_area">
               <div class="btn_standard _white_border _short"><span class="arrow"><span></span></span><span class="text">詳しくみる</span></div>
             </div>

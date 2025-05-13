@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page/contact.css" media="print" onload="this.media='all'">
 
 <?php elseif( is_page('voice') ) : ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page/voice/index.css?v=20250421" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page/voice/index.css?v=20250424" media="print" onload="this.media='all'">
 
 <?php elseif( is_page(array('voice01','voice02','voice03','voice04','voice05')) ) : ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page/voice/single.css" media="print" onload="this.media='all'">

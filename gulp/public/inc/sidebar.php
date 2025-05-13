@@ -1,6 +1,6 @@
 <div id="sidebar">
 	<div class="widget_column">
-		<p class="widget_title _montserrat">CATEFORY</p>
+		<p class="widget_title _montserrat">CATEGORY</p>
 		<ul class="cat_list">
 			<?php
 				$terms = get_terms('category', array('hide_empty' => true));

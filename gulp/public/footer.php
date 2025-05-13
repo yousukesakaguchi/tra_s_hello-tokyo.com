@@ -32,7 +32,7 @@
 							<a class="f_nav_item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>employee/"><span>正社員募集</span></a>
 						</li>
 						<li class="f_nav_item">
-							<a class="f_nav_item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>アルバイト・副業</span></a>
+							<a class="f_nav_item_link" href="<?php echo esc_url( home_url( '/' ) ); ?>parttime/"><span>パートタイム・副業</span></a>
 						</li>
 					</ul>
 					<ul class="f_nav_list">

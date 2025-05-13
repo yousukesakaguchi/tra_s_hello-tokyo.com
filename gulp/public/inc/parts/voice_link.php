@@ -57,7 +57,7 @@
 					</div>
 					<div class="item_text">
 						<p class="item_text_en _poppins">VOICE<span>04</span></p>
-						<p class="item_text_name">Y・M<span>さん</span></p>
+						<p class="item_text_name">H・M<span>さん</span></p>
 					</div>
 				</a>
 			</div>

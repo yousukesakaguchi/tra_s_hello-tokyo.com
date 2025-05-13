@@ -88,6 +88,8 @@
 #voice_section {
   @include mq(sm-max) {
     padding-top: 80px;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   @include mq(md) {
     padding-top: 0px;
@@ -278,6 +280,18 @@
   .voice_content_intro_text {
     letter-spacing: 0.05em;
     font-feature-settings: normal;
+  }
+}
+
+
+#voice_link {
+  padding: 100px 0;
+  @include mq(sm-max) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  @include mq(md) {
+    padding: 150px 0;
   }
 }
 

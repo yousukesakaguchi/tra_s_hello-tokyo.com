@@ -48,20 +48,20 @@ get_header()
           </div>
           <div class="training_section_flow_step">
             <dl>
-              <dt><span class="step">01</span> 普通2種免許の取得</dt>
+              <dt><span class="step">01</span> 研修センターで導入研修</dt>
               <dd>
-                <p class="flow_step_text">普通2種免許取得に必要な学科試験について学びます。免許は提携教習所にて10日程度で取得可能。もちろん費用は全額会社負担です（規定有）。</p>
-                <div class="flow_step_point">
-                  <p>10日〜25日間の研修中も10,000円の日当支給あり。講習費もすべて会社が負担し乗務員としての成長をサポートします。</p>
-                </div>
+                <p class="flow_step_text">熟練教官による研修で、接客マナーや運転基礎知識をレクチャー。地方出身の方やペーパードライバーも安心できる地理講習も充実しています。</p>
               </dd>
             </dl>
           </div>
           <div class="training_section_flow_step">
             <dl>
-              <dt><span class="step">02</span> 研修センターで導入研修</dt>
+              <dt><span class="step">02</span> 普通2種免許の取得</dt>
               <dd>
-                <p class="flow_step_text">熟練教官による研修で、接客マナーや運転基礎知識をレクチャー。地方出身の方やペーパードライバーも安心できる地理講習も充実しています。</p>
+                <p class="flow_step_text">普通2種免許取得に必要な学科試験について学びます。免許は提携教習所にて10日程度で取得可能。もちろん費用は全額会社負担です（規定有）。</p>
+                <div class="flow_step_point">
+                  <p>10日〜25日間の研修中も10,000円の日当支給あり。講習費もすべて会社が負担し乗務員としての成長をサポートします。</p>
+                </div>
               </dd>
             </dl>
           </div>
@@ -155,6 +155,22 @@ get_header()
           <h3 class="title">バイク・自転車通勤OK</h3>
           <div class="intro">
             <p class="intro_text">バイクや自転車での通勤もOKです。駐輪スペースは自由にご利用ください。</p>
+          </div>
+        </div>
+        <div class="icon_card_item">
+          <p class="number"><span>BENEFITS 10</span></p>
+          <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/walfare/benefit10.svg" width="105" height="105" alt="" /></div>
+          <h3 class="title">会員制福利厚生サービス<br />「日本交通福利厚生俱楽部」</h3>
+          <div class="intro">
+            <p class="intro_text">会員証を提示することで様々な割引を受けることができます。</p>
+          </div>
+        </div>
+        <div class="icon_card_item">
+          <p class="number"><span>BENEFITS 11</span></p>
+          <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/walfare/benefit11.svg" width="105" height="105" alt="" /></div>
+          <h3 class="title">クラブ活動</h3>
+          <div class="intro">
+            <p class="intro_text">野球部、ゴルフ部、カラオケ部など多様なクラブ活動が自由参加で楽しめます。</p>
           </div>
         </div>
       </div>
